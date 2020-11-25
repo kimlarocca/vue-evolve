@@ -5,7 +5,7 @@ export default {
   component: SocialLink
 }
 
-export const All = () => ({
+export const Standard = () => ({
   components: { SocialLink },
   template: `
     <div class="sbdocs-large-container">

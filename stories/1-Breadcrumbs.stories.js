@@ -5,7 +5,7 @@ export default {
   component: Breadcrumbs
 }
 
-export const All = () => ({
+export const Standard = () => ({
   components: { Breadcrumbs },
   template: `
     <div class="sbdocs-large-container">

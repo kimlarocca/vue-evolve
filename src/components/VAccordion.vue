@@ -10,14 +10,13 @@
       role="button"
       tabindex="0"
       @click="open"
-      @keypress.enter.space="open"
+      @keypress.enter.space.prevent="open"
     >
       <div class="accordion-header-wrapper">
         <slot name="header" />
       </div>
       <div class="accordion-icon">
-        <simple-arrow-down v-if="active" />
-        <simple-arrow-up v-else />
+        <i class="fas fa-angle-down" />
       </div>
     </div>
     <transition name="accordion">
@@ -35,16 +34,13 @@
 </template>
 
 <script>
-import SimpleArrowDown from '../components/icons/SimpleArrowDown'
-import SimpleArrowUp from '../components/icons/SimpleArrowUp'
-
 export default {
-  components: {
-    SimpleArrowDown,
-    SimpleArrowUp
-  },
   props: {
     shouldOpenOnLoad: {
+      type: Boolean,
+      default: false
+    },
+    closedOnMobile: {
       type: Boolean,
       default: false
     }
@@ -63,10 +59,18 @@ export default {
       return this.active
     }
   },
+  mounted () {
+    if (this.closedOnMobile && window.innerWidth < 850) {
+      this.close()
+    }
+  },
   updated () {
     this.height = this.$slots.content[0].context.$el.clientHeight
   },
   methods: {
+    close () {
+      this.active = false
+    },
     open () {
       this.active = !this.visible
     }
@@ -87,24 +91,25 @@ export default {
   padding-right: var(--space-2);
 }
 
-.accordion .accordion-icon svg {
-  height: 20px;
+.accordion .accordion-icon {
+  font-size: 30px;
+  transition: var(--transition);
+}
+
+.accordion .accordion-header-active .accordion-icon {
+  transform: rotate(180deg);
 }
 
 .accordion-enter-active {
-  transition: max-height .3s;
+  transition: all var(--transition) ease-in;
 }
 
 .accordion-leave-active {
-  transition: max-height .3s;
-}
-
-.accordion-enter-to, .accordion-leave {
-  overflow: hidden;
+  transition: all var(--transition) ease-out;
 }
 
 .accordion-enter, .accordion-leave-to {
-  overflow: hidden;
-  max-height: 0 !important; // need important to override inline style
+  max-height: 0 !important; // needs important to override inline style
+  opacity: 0;
 }
 </style>

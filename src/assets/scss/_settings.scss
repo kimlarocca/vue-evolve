@@ -12,9 +12,9 @@
   --color-quinary: #f244e1;
 
   // Fonts
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Rock+Salt&display=swap");
-  --font-family-secondary: "Rock Salt", sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
   --font-family-primary: "Roboto", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
   --font-family-fa: "Font Awesome 5 Free", serif;
 
   // Font Levers
@@ -59,40 +59,37 @@
   // Typography (based on modular scale set above)
 
   h1 {
-    @include typeface(secondary, 9);
-    @media all and (min-width: $medium) {
-      @include typeface(secondary, 11);
-    }
-    @media all and (min-width: $large) {
-      @include typeface(secondary, 16);
-    }
-  }
-
-  h2 {
     @include typeface(primary, 9);
     @media all and (min-width: $medium) {
       @include typeface(primary, 14);
     }
   }
 
-  h3 {
+  h2 {
     @include typeface(primary, 8);
-    @media all and (min-width: $large) {
-      @include typeface(primary, 11);
+    @media all and (min-width: $medium) {
+      @include typeface(primary, 13);
+    }
+  }
+
+  h3 {
+    @include typeface(primary, 7);
+    @media all and (min-width: $medium) {
+      @include typeface(primary, 12);
     }
   }
 
   h4 {
     @include typeface(primary, 6);
     @media all and (min-width: $medium) {
-      @include typeface(heaprimaryder, 8);
+      @include typeface(heaprimaryder, 10);
     }
   }
 
   h5 {
     @include typeface(primary, 5);
     @media all and (min-width: $medium) {
-      @include typeface(primary, 6);
+      @include typeface(primary, 7);
     }
     text-transform: uppercase;
   }
@@ -100,7 +97,7 @@
   h6 {
     @include typeface(primary, 5);
     @media all and (min-width: $medium) {
-      @include typeface(primary, 6);
+      @include typeface(primary, 7);
     }
   }
 
@@ -175,6 +172,11 @@
   --button-text-transform: uppercase;
   --button-padding: var(--space-3) var(--space-6);
 
+  // Menu
+  --menu-width: 350px;
+  --menu-text: var(--color-text);
+  --menu-background: var(--color-light-gray);
+
   // Breadcrumbs
   --breadcrumbs-text: var(--color-text);
   --breadcrumbs-link-color: var(--color-link);
@@ -198,4 +200,8 @@
   // Image With Caption
   --image-with-caption-text: var(--color-white);
   --image-with-caption-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+  // Callout Banner
+  --callout-banner-text: var(--color-text);
+  --callout-banner-background-color: var(--color-light-gray);
 }
