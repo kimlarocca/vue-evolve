@@ -1,12 +1,15 @@
 <template>
-  <div class="menu">
+  <div
+    class="menu"
+    :class="layout"
+  >
     <div
       class="menu-hamburger"
       @click="toggleMenu"
     >
       <i class="fas fa-bars" />
     </div>
-    <transition name="slide-right">
+    <transition :name="transitionName">
       <nav
         v-if="menuOpen"
         class="menu-panel"
@@ -81,6 +84,10 @@ export default {
     secondaryNav: {
       type: Array,
       default: null
+    },
+    layout: {
+      type: String,
+      default: 'left'
     }
   },
   data: function () {
@@ -100,6 +107,10 @@ export default {
     },
     hasSocialSlot () {
       return !!this.$slots.social
+    },
+    transitionName () {
+      if (this.layout === 'right') return 'slide-left'
+      return 'slide-right'
     }
   },
   methods: {
@@ -112,15 +123,8 @@ export default {
 
 <style lang="scss">
 .menu .menu-hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
   cursor: pointer;
   font-size: 30px;
-}
-
-.menu.not-fixed .menu-hamburger {
-  position: relative;
 }
 
 .menu .menu-close {
@@ -141,7 +145,6 @@ export default {
   color: RGB(var(--menu-text));
   background-color: var(--menu-background);
   position: fixed;
-  left: 0;
   top: 0;
   height: 100vh;
   z-index: 9999;
@@ -149,5 +152,13 @@ export default {
   width: var(--menu-width);
   max-width: 100vw;
   text-align: center;
+}
+
+.menu.left .menu-panel {
+  left: 0;
+}
+
+.menu.right .menu-panel {
+  right: 0;
 }
 </style>

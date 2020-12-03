@@ -2,7 +2,7 @@
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity var(--animation-duration-standard);
+  transition: opacity 300ms;
 }
 
 .fade-enter, .fade-leave-to {
@@ -13,11 +13,24 @@
 
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: all var(--animation-duration-standard) var(--animation-easing-standard);
+  transition: all 300ms ease;
 }
 
 .slide-right-enter,
 .slide-right-leave-to {
   transform: translateX(-100%);
-  transition: all var(--animation-duration-standard) var(--animation-easing-incoming) 0s;
+  transition: all 300ms ease-in 0s;
+}
+
+// slide in from right to left
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 300ms ease-out;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+  transform: translateX(100%);
+  transition: all 300ms ease-in 0s;
 }

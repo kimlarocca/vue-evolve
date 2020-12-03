@@ -33,10 +33,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-is": "^16.13.1",
+    "sass": "^1.29.0",
     "sass-loader": "^8.0.2",
+    "style-resources-loader": "^1.4.1",
     "vue-template-compiler": "^2.6.11"
   },
   "description": "A design system built with Storybook and Vue.",

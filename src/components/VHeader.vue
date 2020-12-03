@@ -1,64 +1,86 @@
 <template>
-  <header>
-    <div class="logo">
-      <img alt="black lives matter morristown nj" src="/img/logo.png"/>
+  <header
+    class="header"
+    :class="[layout, {'responsive': responsive}]"
+  >
+    <div class="left">
+      <slot
+        v-if="layout === 'left'"
+        name="menu"
+        :class="{'responsive': responsive}"
+      />
+      <slot name="logo" />
     </div>
-    <nav>
-      <a class="button donate">donate</a>
-      <i class="fas fa-bars"></i>
-    </nav>
+    <div class="right">
+      <div class="header-secondary-navigation">
+        <slot name="navigation" />
+      </div>
+      <slot name="button" />
+      <slot
+        v-if="layout === 'right'"
+        name="menu"
+        :class="{'responsive': responsive}"
+      />
+    </div>
   </header>
 </template>
 
 <script>
-  export default {
-    name: 'VHeader'
+export default {
+  name: 'VHeader',
+  props: {
+    layout: {
+      type: String,
+      default: 'left'
+    },
+    responsive: {
+      type: String,
+      default: 'left'
+    }
   }
+}
 </script>
 
-<style lang="scss" scoped>
-  header {
-    position: relative;
-    z-index: 100;
+<style
+  lang="scss"
+  scoped
+>
+@import "src/assets/scss/breakpoints";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.header .left,
+.header .right {
+  display: flex;
+  align-items: center;
+}
+
+.header .button {
+  margin-left: var(--space-4);
+}
+
+.header.left .menu {
+  margin-right: var(--space-4);
+}
+
+.header.right .menu {
+  margin-left: var(--space-4);
+}
+
+.header .menu.responsive {
+  @media all and (min-width: $large) {
+    display: none;
   }
+}
 
-  nav {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-
-    i {
-      color: black;
-      font-size: 2rem;
-    }
+.header.responsive .header-secondary-navigation {
+  display: none;
+  @media all and (min-width: $large) {
+    display: block;
   }
-
-  .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    width: 150px;
-    height: 175px;
-    display: flex;
-    padding: 1rem;
-  }
-
-  .donate {
-    background: var(--color-secondary);
-    border: var(--color-secondary);
-    color: var(--color-white);
-    opacity: 1;
-    margin-right: 1.5rem;
-    padding: .25rem 1.5rem;
-    line-height: 1.45rem;
-
-    &:hover {
-      background: var(--color-secondary);
-      border: var(--color-secondary);
-      color: var(--color-white);
-      opacity: var(--opacity-on-hover);
-    }
-  }
+}
 </style>
