@@ -1,153 +1,110 @@
 <template>
-    <footer>
-        <div class="container">
-
-            <div class="grid-x grid-margin-x">
-                <div class="cell large-4 content">
-                    <div class="margin-bottom-2 text-center large-text-left">
-                        <img src="https://via.placeholder.com/225x70?text=logo" alt="placeholder image"/>
-                    </div>
-                    <ul class="social-links text-center large-text-left margin-bottom-1">
-                        <social-link
-                                icon="fab fa-facebook-f"
-                                link="https://www.facebook.com"
-                                altText="facebook"
-                        >
-                        </social-link>
-                        <social-link
-                                icon="fab fa-twitter"
-                                link="https://www.twitter.com"
-                                altText="twitter"
-                        >
-                        </social-link>
-                        <social-link
-                                icon="fab fa-youtube"
-                                link="https://www.youtube.com"
-                                altText="youtube"
-                        >
-                        </social-link>
-                        <social-link
-                                icon="fab fa-instagram"
-                                link="https://www.instagram.com"
-                                altText="instagram"
-                        >
-                        </social-link>
-                        <social-link
-                                icon="fab fa-linkedin-in"
-                                link="https://www.linkedin.com"
-                                altText="linkedin"
-                        >
-                        </social-link>
-                    </ul>
-                    <div class="margin-bottom-1 like-h6">subscribe to our newsletter</div>
-                    <form>
-                        <label for="emailAddress" class="hide-ally-element"/>
-                        <input id="emailAddress" type="text" placeholder="email address">
-                        <button class="button">submit</button>
-                    </form>
-                </div>
-                <div class="cell large-2 menus">
-                    <accordion mobileOnly="true" class="no-border-on-desktop">
-                        <accordion-item>
-                            <template slot="header">
-                                <h6>link group 1</h6>
-                            </template>
-                            <template slot="content">
-                                <ul class="menu">
-                                    <li v-for="(link, index) in servicesLinks" :key="index"><a :href="link.url">{{
-                                        link.name }}</a></li>
-                                </ul>
-                            </template>
-                        </accordion-item>
-                    </accordion>
-                </div>
-                <div class="cell large-2">
-                    <accordion mobileOnly="true" class="no-border-on-desktop">
-                        <accordion-item>
-                            <template slot="header">
-                                <div class="like-h6">link group 2</div>
-                            </template>
-                            <template slot="content">
-                                <ul class="menu">
-                                    <li v-for="(link, index) in whyLinks" :key="index"><a :href="link.url">{{ link.name
-                                        }}</a></li>
-                                </ul>
-                            </template>
-                        </accordion-item>
-                    </accordion>
-                </div>
-                <div class="cell large-2">
-                    <accordion mobileOnly="true" class="no-border-on-desktop">
-                        <accordion-item>
-                            <template slot="header">
-                                <div class="like-h6">link group 3</div>
-                            </template>
-                            <template slot="content">
-                                <ul class="menu">
-                                    <li v-for="(link, index) in aboutLinks" :key="index"><a :href="link.url">{{
-                                        link.name }}</a></li>
-                                </ul>
-                            </template>
-                        </accordion-item>
-                    </accordion>
-                </div>
-                <div class="cell large-2">
-                    <accordion mobileOnly="true" class="no-border-on-desktop">
-                        <accordion-item>
-                            <template slot="header">
-                                <div class="like-h6">link group 4</div>
-                            </template>
-                            <template slot="content">
-                                <ul class="menu">
-                                    <li v-for="(link, index) in resourcesLinks" :key="index"><a :href="link.url">{{
-                                        link.name }}</a></li>
-                                </ul>
-                            </template>
-                        </accordion-item>
-                    </accordion>
-                </div>
-            </div>
-
-            <div class="bottom content">
-                <ul>
-                    <li class="copyright">©{{ currentYear }} Company Name. All rights reserved.</li>
-                    <li v-for="(link, index) in footerLinks" :key="index">
-                        <a :href="link.url"> {{ link.name }}</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
+  <footer class="footer">
+    <div
+      v-if="hasLogoSlot"
+      class="footer-logo"
+    >
+      <slot name="logo" />
+      <v-spacer size="double" />
+    </div>
+    <div
+      v-if="hasSocialSlot"
+      class="footer-social"
+    >
+      <slot name="social" />
+      <v-spacer size="double" />
+    </div>
+    <div
+      v-if="hasBlurbSlot"
+      class="footer-blurb"
+    >
+      <slot name="blurb" />
+      <v-spacer size="double" />
+    </div>
+    <div
+      v-if="navigation"
+      class="footer-navigation"
+    >
+      <secondary-navigation
+        :nav-items="navigation"
+        orientation="horizontal"
+      />
+      <v-spacer size="double" />
+    </div>
+    <p class="footer-copyright">Copyright © {{ currentYear }}<span v-if="companyName"> {{ companyName }}</span>. All Rights Reserved.
+    </p>
+  </footer>
 </template>
 
 <script>
-    import SocialLink from '../components/SocialLink'
-    import Accordion from '../components/Accordion'
-    import AccordionItem from '../components/AccordionItem'
-    import navigation from '../assets/json/navigation'
+import SocialLink from '../components/SocialLink'
+import SecondaryNavigation from '../components/SecondaryNavigation'
+import VSpacer from '../components/VSpacer'
 
-    export default {
-        name: 'VFooter',
-        components: {
-            'social-link': SocialLink,
-            'accordion': Accordion,
-            'accordion-item': AccordionItem
-        },
-        data: function () {
-            return {
-                currentYear: this.getCurrentYear(),
-                servicesLinks: navigation.services,
-                whyLinks: navigation.why,
-                aboutLinks: navigation.about,
-                resourcesLinks: navigation.resources,
-                footerLinks: navigation.footerLinks
-            }
-        },
-        methods: {
-            getCurrentYear () {
-                return new Date().getFullYear()
-            }
-        }
+export default {
+  name: 'Footer',
+  components: {
+    SecondaryNavigation, SocialLink, VSpacer
+  },
+  props: {
+    companyName: {
+      type: String,
+      default: null
+    },
+    navigation: {
+      type: Array,
+      default: null
     }
+  },
+  computed: {
+    currentYear () {
+      return new Date().getFullYear()
+    },
+    hasBlurbSlot () {
+      return !!this.$slots.blurb
+    },
+    hasLogoSlot () {
+      return !!this.$slots.logo
+    },
+    hasSocialSlot () {
+      return !!this.$slots.social
+    }
+  }
+}
 </script>
+
+<style lang="scss">
+.footer {
+  padding: var(--space-4);
+  background: var(--footer-background);
+  color: var(--footer-color);
+  text-align: center;
+  font-size: var(--font-size-5);
+}
+
+.footer a,
+.footer a:visited,
+.footer a:active {
+  color: var(--footer-color);
+  padding-bottom: var(--space-1);
+  border-bottom: solid 1px var(--footer-color);
+
+  &:hover {
+    color: var(--footer-color);
+    opacity: var(--opacity-on-hover);
+  }
+}
+
+.footer .footer-social li a,
+.footer .footer-social li a:visited,
+.footer footer-social li a:active {
+  color: var(--footer-color);
+  padding-bottom: 0;
+  border-bottom: none;
+
+  &:hover {
+    color: var(--footer-color);
+    opacity: var(--opacity-on-hover);
+  }
+}
+</style>
