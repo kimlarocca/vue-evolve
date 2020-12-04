@@ -45,7 +45,7 @@ export default {
   lang="scss"
   scoped
 >
-@import "src/assets/scss/breakpoints";
+$breakpoint: 1200px;
 
 .header {
   display: flex;
@@ -72,14 +72,14 @@ export default {
 }
 
 .header .menu.responsive {
-  @media all and (min-width: $large) {
+  @media all and (min-width: $breakpoint) {
     display: none;
   }
 }
 
 .header.responsive .header-secondary-navigation {
   display: none;
-  @media all and (min-width: $large) {
+  @media all and (min-width: $breakpoint) {
     display: block;
   }
 }

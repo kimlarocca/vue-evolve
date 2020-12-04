@@ -1,38 +1,40 @@
 <template>
   <footer class="footer">
-    <div
-      v-if="hasLogoSlot"
-      class="footer-logo"
-    >
-      <slot name="logo" />
-      <v-spacer size="double" />
+    <div class="l-container">
+      <div
+        v-if="hasLogoSlot"
+        class="footer-logo"
+      >
+        <slot name="logo" />
+        <v-spacer size="double" />
+      </div>
+      <div
+        v-if="hasSocialSlot"
+        class="footer-social"
+      >
+        <slot name="social" />
+        <v-spacer size="double" />
+      </div>
+      <div
+        v-if="hasBlurbSlot"
+        class="footer-blurb"
+      >
+        <slot name="blurb" />
+        <v-spacer size="double" />
+      </div>
+      <div
+        v-if="navigation"
+        class="footer-navigation"
+      >
+        <secondary-navigation
+          :nav-items="navigation"
+          orientation="horizontal"
+        />
+        <v-spacer size="double" />
+      </div>
+      <p class="footer-copyright">Copyright © {{ currentYear }}<span v-if="companyName"> {{ companyName }}</span>. All Rights Reserved.
+      </p>
     </div>
-    <div
-      v-if="hasSocialSlot"
-      class="footer-social"
-    >
-      <slot name="social" />
-      <v-spacer size="double" />
-    </div>
-    <div
-      v-if="hasBlurbSlot"
-      class="footer-blurb"
-    >
-      <slot name="blurb" />
-      <v-spacer size="double" />
-    </div>
-    <div
-      v-if="navigation"
-      class="footer-navigation"
-    >
-      <secondary-navigation
-        :nav-items="navigation"
-        orientation="horizontal"
-      />
-      <v-spacer size="double" />
-    </div>
-    <p class="footer-copyright">Copyright © {{ currentYear }}<span v-if="companyName"> {{ companyName }}</span>. All Rights Reserved.
-    </p>
   </footer>
 </template>
 
