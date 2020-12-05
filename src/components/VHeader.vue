@@ -44,7 +44,6 @@ export default {
 <style
   lang="scss"
 >
-@import "./src/assets/scss/breakpoints";
 .header {
   display: flex;
   justify-content: space-between;
@@ -81,14 +80,14 @@ export default {
 }
 
 .header.responsive .menu {
-  @media all and (min-width: $large) {
+  @media all and (min-width: 1200px) {
     display: none;
   }
 }
 
 .header.responsive .header-secondary-navigation {
   display: none;
-  @media all and (min-width: $large) {
+  @media all and (min-width: 1200px) {
     display: block;
   }
 }
