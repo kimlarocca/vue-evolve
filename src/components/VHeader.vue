@@ -44,7 +44,7 @@ export default {
 <style
   lang="scss"
 >
-@import "src/assets/scss/breakpoints";
+@import "./src/assets/scss/breakpoints";
 .header {
   display: flex;
   justify-content: space-between;
