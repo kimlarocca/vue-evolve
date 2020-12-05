@@ -1,6 +1,6 @@
 <template>
   <header
-    class="header"
+    class="header l-container"
     :class="[layout, {'responsive': responsive}]"
   >
     <div class="left">
@@ -35,7 +35,7 @@ export default {
     },
     responsive: {
       type: String,
-      default: 'left'
+      default: false
     }
   }
 }
@@ -90,5 +90,9 @@ export default {
   @media all and (min-width: 1200px) {
     display: block;
   }
+}
+
+.header .secondary-navigation-item {
+  margin-bottom: 0;
 }
 </style>
