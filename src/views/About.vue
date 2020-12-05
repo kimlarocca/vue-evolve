@@ -1,5 +1,5 @@
 <template>
-  <main class="about">
-    <h1>This is an about page!!</h1>
-  </main>
+  <section class="about l-container">
+    <h1>Vue Evolve About Page Example</h1>
+  </section>
 </template>

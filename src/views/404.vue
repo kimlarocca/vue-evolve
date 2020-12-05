@@ -1,5 +1,5 @@
 <template>
-  <main class="about">
-    <h1>404 not found</h1>
-  </main>
+  <section class="not-found l-container">
+    <h1>Vue Evolve 404 Page Example</h1>
+  </section>
 </template>

@@ -8,8 +8,8 @@ export default {
 export const Intro = () => ({
   template: `
     <div class="sbdocs-large-container">
-      <h1 class="u-space--double--bottom">vuEvolve</h1>
-      <h4 class="u-space--double--bottom">Built with Storybook and Vue</h4>
+      <h1 class="u-space--double--bottom">Vue Evolve</h1>
+      <h4 class="u-space--double--bottom">A design system built with Storybook and Vue</h4>
       <p class="u-space--bottom">A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product. Feel free to explore all of the materials you find here.</p>
     </div>
   `
@@ -48,8 +48,6 @@ export const Colors = () => ({
         <div class="u-background-color--gray--light"><span>light gray</span></div>
         <div class="u-background-color--gray"><span>gray</span></div>
         <div class="u-background-color--gray--dark"><span>dark gray</span></div>
-        <div class="u-background-color--black"><span>black</span></div>
-        <div class="u-background-color--white"><span>white</span></div>
       </div>
     </div>
   `
@@ -70,7 +68,7 @@ export const Spacing = () => ({
       <p class="u-space--top u-space--bottom">Quad:</p>
       <v-spacer size="quad" class="u-background-color--gray--light"/>
       <p class="u-space--top u-space--bottom">Quin:</p>
-      <v-spacer size="quad" class="u-background-color--gray--light"/>
+      <v-spacer size="quin" class="u-background-color--gray--light"/>
       <p class="u-space--top u-space--bottom">Hex:</p>
       <v-spacer size="hex" class="u-background-color--gray--light"/>
       <p class="u-space--top u-space--bottom">Sept:</p>

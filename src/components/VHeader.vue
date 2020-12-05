@@ -43,14 +43,23 @@ export default {
 
 <style
   lang="scss"
-  scoped
 >
-$breakpoint: 1200px;
-
+@import "src/assets/scss/breakpoints";
 .header {
   display: flex;
   justify-content: space-between;
   z-index: 100;
+}
+
+.header .secondary-navigation a,
+.header .secondary-navigation a:visited,
+.header .secondary-navigation a:active {
+  color: var(--header-link-color);
+
+  &:hover {
+    color: var(--header-color);
+    opacity: var(--opacity-on-hover);
+  }
 }
 
 .header .left,
@@ -71,15 +80,15 @@ $breakpoint: 1200px;
   margin-left: var(--space-4);
 }
 
-.header .menu.responsive {
-  @media all and (min-width: $breakpoint) {
+.header.responsive .menu {
+  @media all and (min-width: $large) {
     display: none;
   }
 }
 
 .header.responsive .header-secondary-navigation {
   display: none;
-  @media all and (min-width: $breakpoint) {
+  @media all and (min-width: $large) {
     display: block;
   }
 }

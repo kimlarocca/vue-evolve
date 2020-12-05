@@ -32,7 +32,7 @@
         />
         <v-spacer size="double" />
       </div>
-      <p class="footer-copyright">Copyright © {{ currentYear }}<span v-if="companyName"> {{ companyName }}</span>. All Rights Reserved.
+      <p class="footer-copyright">Copyright © {{ currentYear }}<span v-if="companyName">&nbsp;{{ companyName }}</span>. All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -77,19 +77,16 @@ export default {
 
 <style lang="scss">
 .footer {
-  padding: var(--space-4);
+  padding: var(--footer-padding);
   background: var(--footer-background);
   color: var(--footer-color);
-  text-align: center;
-  font-size: var(--font-size-5);
+  text-align: var(--footer-alignment);
 }
 
 .footer a,
 .footer a:visited,
 .footer a:active {
-  color: var(--footer-color);
-  padding-bottom: var(--space-1);
-  border-bottom: solid 1px var(--footer-color);
+  color: var(--footer-link-color);
 
   &:hover {
     color: var(--footer-color);

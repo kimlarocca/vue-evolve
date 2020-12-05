@@ -82,5 +82,6 @@ select[multiple] {
     height: var(--forms-input-height);
     line-height: var(--forms-input-height);
     padding: var(--forms-inline-button-padding);
+    cursor: pointer;
   }
 }

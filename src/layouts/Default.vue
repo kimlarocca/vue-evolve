@@ -1,17 +1,11 @@
 <template>
-  <div>
-    <v-header/>
-    <main>
-      <slot/>
-    </main>
-  </div>
+  <main>
+    <slot />
+  </main>
 </template>
 
 <script>
-  import VHeader from '../components/VHeader'
-
-  export default {
-    name: 'Default',
-    components: { VHeader }
-  }
+export default {
+  name: 'Default'
+}
 </script>
