@@ -48,6 +48,8 @@ export default {
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  background: var(--header-background);
+  color: var(--header-color);
 }
 
 .header .secondary-navigation a,
@@ -56,7 +58,7 @@ export default {
   color: var(--header-link-color);
 
   &:hover {
-    color: var(--header-color);
+    color: var(--header-link-color-hover);
     opacity: var(--opacity-on-hover);
   }
 }
