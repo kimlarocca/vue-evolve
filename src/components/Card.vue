@@ -107,7 +107,7 @@ export default {
   .content {
 
     .icon {
-      margin-bottom: var(--space-2);
+      margin: var(--space-2) 0 var(--space-3);
     }
 
     .subtitle {

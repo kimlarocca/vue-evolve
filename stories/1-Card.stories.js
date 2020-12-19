@@ -13,7 +13,7 @@ export const WithAnImage = () => ({
         title="Title"
         image="./assets/Placeholder-Image-4_3.png"
         altText="alternative text"
-        subdescription="subtitle"
+        subtitle="subtitle"
         :hasTextLink="true"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
       >
@@ -30,7 +30,7 @@ export const WithAVideo = () => ({
         title="Title"
         video="https://player.vimeo.com/video/90283590"
         altText="alternative text"
-        subdescription="subtitle"
+        subtitle="subtitle"
         :hasTextLink="true"
         cta="Click Here"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
@@ -46,10 +46,7 @@ export const WithAnIcon = () => ({
     <div class="sbdocs-small-container">
       <card
         icon="fas fa-heart"
-        title="Title"
-        video="https://player.vimeo.com/video/90283590"
-        altText="alternative text"
-        subdescription="subtitle"
+        subtitle="subtitle"
         :hasTextLink="true"
         cta="Click Here"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
@@ -68,7 +65,7 @@ export const WithoutTextLink = () => ({
         title="Title"
         video="https://player.vimeo.com/video/90283590"
         altText="alternative text"
-        subdescription="subtitle"
+        subtitle="subtitle"
         cta="Click Here"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
       >
