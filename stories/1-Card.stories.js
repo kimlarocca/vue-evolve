@@ -39,3 +39,40 @@ export const WithAVideo = () => ({
     </div>
   `
 })
+
+export const WithAnIcon = () => ({
+  components: { Card },
+  template: `
+    <div class="sbdocs-small-container">
+      <card
+        icon="fas fa-heart"
+        title="Title"
+        video="https://player.vimeo.com/video/90283590"
+        altText="alternative text"
+        subdescription="subtitle"
+        :hasTextLink="true"
+        cta="Click Here"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
+      >
+      </card>
+    </div>
+  `
+})
+
+export const WithoutTextLink = () => ({
+  components: { Card },
+  template: `
+    <div class="sbdocs-small-container">
+      <card
+        icon="fas fa-heart"
+        title="Title"
+        video="https://player.vimeo.com/video/90283590"
+        altText="alternative text"
+        subdescription="subtitle"
+        cta="Click Here"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
+      >
+      </card>
+    </div>
+  `
+})
