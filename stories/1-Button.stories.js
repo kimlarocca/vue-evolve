@@ -14,6 +14,15 @@ export const Standard = () => ({
 `
 })
 
+export const WithoutLink = () => ({
+  components: { VButton },
+  template: `
+    <div class="sbdocs-large-container">
+      <v-button>Test Button</v-button>
+    </div>
+`
+})
+
 export const WithIcon = () => ({
   components: { VButton },
   template: `

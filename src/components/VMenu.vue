@@ -161,4 +161,8 @@ export default {
 .menu.right .menu-panel {
   right: 0;
 }
+
+.menu .button {
+    margin-left: 0;
+}
 </style>

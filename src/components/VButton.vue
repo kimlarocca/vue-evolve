@@ -1,8 +1,9 @@
 <template>
   <a
-    class="button u-padding"
+    class="button"
     role="button"
     tabindex="0"
+    :href="href"
     @click="$emit('click', $event);"
   >
     <slot>button</slot>
@@ -17,7 +18,8 @@
 export default {
   name: 'VButton',
   props: {
-    icon: String
+    icon: String,
+    href: String
   },
   computed: {
     hasIcon () {
@@ -34,6 +36,7 @@ export default {
 .button,
 .button:visited,
 .button:active {
+  cursor: pointer;
   display: inline-block;
   background: var(--button-background);
   border: var(--button-border);
