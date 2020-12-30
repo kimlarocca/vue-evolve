@@ -35,6 +35,7 @@ export default {
 >
 .button,
 .button:visited,
+.button:focus,
 .button:active {
   cursor: pointer;
   display: inline-block;
