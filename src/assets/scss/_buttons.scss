@@ -1,7 +1,17 @@
+button,
+button:visited,
+button:visited,
+button:focus,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
 .button,
 .button:visited,
+.button:focus,
 .button:active {
   display: inline-block;
+  border-image: none;
+  -webkit-appearance: none;
   background: var(--button-background);
   border: var(--button-border);
   color: var(--button-text);
