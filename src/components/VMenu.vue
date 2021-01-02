@@ -115,13 +115,31 @@ export default {
   },
   methods: {
     toggleMenu () {
-      this.menuOpen = !this.menuOpen
+      this.$nextTick(() => this.menuOpen = !this.menuOpen)
     }
   }
 }
 </script>
 
 <style lang="scss">
+.header .menu .secondary-navigation-item a,
+.header .menu .secondary-navigation-item a:visited,
+.header .menu .secondary-navigation-item a:active,
+.menu .secondary-navigation-item a,
+.menu .secondary-navigation-item a:visited,
+.menu .secondary-navigation-item a:active,
+.menu .social-links li a,
+.menu .social-links li a:visited,
+.menu .social-links li a:active {
+  color: var(--menu-text);
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--menu-text);
+    opacity: var(--opacity-on-hover);
+  }
+}
+
 .menu .menu-hamburger {
   cursor: pointer;
   font-size: 30px;
@@ -134,6 +152,7 @@ export default {
   top: var(--space-3);
   right: var(--space-3);
   transition: var(--transition);
+  color: var(--menu-text);
 
   &:hover {
     opacity: var(--opacity-on-hover);
@@ -163,6 +182,6 @@ export default {
 }
 
 .menu .button {
-    margin-left: 0;
+  margin-left: 0;
 }
 </style>
