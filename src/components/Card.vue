@@ -94,6 +94,14 @@ export default {
     cursor: pointer;
   }
 
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
   .title {
     background: var(--card-header-background);
     font-weight: 700;

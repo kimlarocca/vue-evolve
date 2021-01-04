@@ -11,6 +11,7 @@ export const WithAnImage = () => ({
     <div class="sbdocs-small-container">
       <card
         title="Title"
+        link="http://www.google.com"
         image="./assets/Placeholder-Image-4_3.png"
         altText="alternative text"
         subtitle="subtitle"
@@ -28,6 +29,7 @@ export const WithAVideo = () => ({
     <div class="sbdocs-small-container">
       <card
         title="Title"
+        link="http://www.google.com"
         video="https://player.vimeo.com/video/90283590"
         altText="alternative text"
         subtitle="subtitle"
@@ -46,6 +48,7 @@ export const WithAnIcon = () => ({
     <div class="sbdocs-small-container">
       <card
         icon="fas fa-heart"
+        link="http://www.google.com"
         subtitle="subtitle"
         :hasTextLink="true"
         cta="Click Here"
@@ -62,6 +65,7 @@ export const WithoutTextLink = () => ({
     <div class="sbdocs-small-container">
       <card
         icon="fas fa-heart"
+        link="http://www.google.com"
         title="Title"
         video="https://player.vimeo.com/video/90283590"
         altText="alternative text"
