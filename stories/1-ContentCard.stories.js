@@ -1,8 +1,7 @@
 import ContentCard from '../src/components/ContentCard'
 
 export default {
-  title: 'Content Card',
-  component: ContentCard
+  title: 'Components/Content Card'
 }
 
 export const MediaOnLeft = () => ({

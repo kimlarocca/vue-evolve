@@ -4,7 +4,7 @@ import VButton from '../src/components/VButton'
 import SecondaryNavigation from '../src/components/SecondaryNavigation'
 
 export default {
-  title: 'Header'
+  title: 'Components/Header'
 }
 
 export const MenuOnLeft = () => ({

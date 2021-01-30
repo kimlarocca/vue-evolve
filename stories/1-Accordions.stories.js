@@ -1,7 +1,7 @@
 import VAccordion from '../src/components/VAccordion'
 
 export default {
-  title: 'Accordions'
+  title: 'Components/Accordions'
 }
 
 export const ClosedOnLoad = () => ({

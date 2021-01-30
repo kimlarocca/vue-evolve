@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Npm Link" />
+
+# Using NPM Link
+
+NPM Link is used to link project dependencies together locally without having to publish them.
+
+#### Setup
+
+Create a global symlink for this package (run this in the vue-evolve project):
+
+```
+npm link (or sudo npm link)
+```
+
+Tell your application to use the global symlink (run this in your web client project):
+
+```
+npm link vue-evolve
+```
+
+Your web client should automatically refresh with changes, but you may need to update it after components are changed by running:
+
+```
+npm update
+```
+
+Unlink your web client or vue-evolve:
+
+```
+npm unlink
+```

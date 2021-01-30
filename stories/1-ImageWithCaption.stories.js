@@ -1,8 +1,7 @@
 import ImageWithCaption from '../src/components/ImageWithCaption'
 
 export default {
-  title: 'Image With Caption',
-  component: ImageWithCaption
+  title: 'Components/Image With Caption'
 }
 
 export const WithGradient = () => ({

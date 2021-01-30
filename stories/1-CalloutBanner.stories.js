@@ -1,7 +1,7 @@
 import CalloutBanner from '../src/components/CalloutBanner'
 
 export default {
-  title: 'Callout Banner'
+  title: 'Components/Callout Banner'
 }
 
 export const Standard = () => ({

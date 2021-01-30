@@ -1,8 +1,7 @@
 import SecondaryNavigation from '../src/components/SecondaryNavigation'
 
 export default {
-  title: 'Secondary Navigation',
-  component: SecondaryNavigation
+  title: 'Components/Secondary Navigation'
 }
 
 export const Vertical = () => ({

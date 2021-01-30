@@ -1,8 +1,7 @@
 import BiographyCard from '../src/components/BiographyCard'
 
 export default {
-  title: 'Biography Card',
-  component: BiographyCard
+  title: 'Components/Biography Card'
 }
 
 export const VerticalLayout = () => ({

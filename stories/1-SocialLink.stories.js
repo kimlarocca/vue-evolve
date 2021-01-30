@@ -1,8 +1,7 @@
 import SocialLink from '../src/components/SocialLink'
 
 export default {
-  title: 'Social Link',
-  component: SocialLink
+  title: 'Components/Social Link'
 }
 
 export const Standard = () => ({

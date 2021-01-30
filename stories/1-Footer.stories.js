@@ -2,7 +2,7 @@ import VFooter from '../src/components/VFooter'
 import SocialLink from '../src/components/SocialLink'
 
 export default {
-  title: 'Footer'
+  title: 'Components/Footer'
 }
 
 export const Standard = () => ({

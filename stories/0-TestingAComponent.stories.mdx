@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Testing A Component" />
+
+# Testing A Component
+
+Don't forget to write unit tests for your component.
+
+#### Testing component props and basic accessibility
+
+You should test any props your component uses to make sure they are passing through correctly, and you should always include a basic accessibility test:
+
+```js
+import { mount, shallowMount } from '@vue/test-utils'
+import { describe, test, expect } from '@jest/globals'
+import VTag from '../components/VTag'
+import { toHaveNoViolations } from 'jest-axe'
+import axe from './axe-helper'
+
+expect.extend(toHaveNoViolations)
+
+describe('VTag', () => {
+  const text = 'news'
+  const href = 'http://www.foo.com'
+  test('text prop works: null', () => {
+    const wrapper = shallowMount(VTag, {
+      propsData: {
+        text: text
+      }
+    })
+    // check if prop works
+    expect(wrapper.text()).toBe(text)
+  })
+
+  test('link attribute works', () => {
+    const wrapper = shallowMount(VTag, {
+      attrs: {
+        href: href
+      }
+    })
+    // check if prop works and rendered correctly
+    expect(wrapper.attributes().href).toBe(href)
+  })
+
+  test('it passes basic accessibility tests', async () => {
+    const wrapper = mount(VTag)
+    const results = await axe(wrapper.element)
+    expect(results).toHaveNoViolations()
+  })
+})
+```
+
+#### Testing component events
+
+You should also test any events you pass out of your component to make sure they are firing correctly. The following example test that the Persistent Player's mute button works correctly:
+
+```js
+test('mute button works', () => {
+    const wrapper = mount(PersistentPlayer)
+    const div = wrapper.get('.volume-control-icon')
+    div.trigger('click')
+
+    const emitted = wrapper.emitted()
+    expect(emitted['volume-toggle-mute']).toBeDefined()
+    expect(emitted['volume-toggle-mute'].length).toBe(1)
+})
+```

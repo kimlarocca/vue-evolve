@@ -1,8 +1,7 @@
 import Card from '../src/components/Card'
 
 export default {
-  title: 'Card',
-  component: Card
+  title: 'Components/Card'
 }
 
 export const WithAnImage = () => ({

@@ -3,7 +3,7 @@ import VButton from '../src/components/VButton'
 import SocialLink from '../src/components/SocialLink'
 
 export default {
-  title: 'Menu'
+  title: 'Components/Menu'
 }
 
 export const OnTheLeft = () => ({
