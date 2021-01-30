@@ -29,6 +29,14 @@ npm run build-storybook
 
 #### Deploys Storybook To Github Pages
 
+First build storybook:
+
+```
+npm run build-storybook
+```
+
+Then push to the master branch. Finally, push the updates to the gh-pages branch:
+
 ```
 git subtree push --prefix storybook-static origin gh-pages
 ```
