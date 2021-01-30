@@ -33,7 +33,7 @@ npm run build-storybook
 git subtree push --prefix storybook-static origin gh-pages
 ```
 
-View the Storybook site at [https://kimlarocca.github.io/vue-evolve](https://kimlarocca.github.io/vue-evolve)
+In a few minutes, Github Pages should refresh with your newest repository changes. Visit [https://kimlarocca.github.io/vue-evolve](https://kimlarocca.github.io/vue-evolve) to view Storybook!
 
 #### Runs unit tests
 
