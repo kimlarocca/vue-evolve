@@ -10,7 +10,7 @@ export const WithAnImage = () => ({
     <v-card
       title="Title"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alternative text"
       subtitle="subtitle"
       :hasTextLink="true"
@@ -81,11 +81,11 @@ export const WithoutImageOrVideo = () => ({
 export const InAGrid = () => ({
   components: { VCard },
   template: `
-    <div class="l-grid l-grid--3up l-grid--large-gutters">
+    <div class="l-grid l-grid--3up">
     <v-card
       title="Title"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alternative text"
       subtitle="subtitle"
       :hasTextLink="true"
@@ -94,7 +94,7 @@ export const InAGrid = () => ({
     <v-card
       title="Title"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alternative text"
       subtitle="subtitle"
       :hasTextLink="true"
@@ -103,7 +103,7 @@ export const InAGrid = () => ({
     <v-card
       title="Title"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alternative text"
       subtitle="subtitle"
       :hasTextLink="true"

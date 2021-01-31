@@ -8,7 +8,7 @@ export const VerticalLayout = () => ({
   components: { BiographyCard },
   template: `
     <biography-card
-      image="./assets/Placeholder-Image-1_1.png"
+      image="https://via.placeholder.com/300x300?text=1:1"
       altText="alternative text"
       name="John Doe 1"
       title="President, Google.com, Seattle"
@@ -30,7 +30,7 @@ export const HorizontalLayout = () => ({
   components: { BiographyCard },
   template: `
     <biography-card
-      image="./assets/Placeholder-Image-1_1.png"
+      image="https://via.placeholder.com/300x300?text=1:1"
       altText="alternative text"
       name="John Doe 1"
       title="President, Google.com, Seattle"
@@ -51,9 +51,9 @@ export const HorizontalLayout = () => ({
 export const InAGrid = () => ({
   components: { BiographyCard },
   template: `
-    <div class="l-grid l-grid--3up l-grid--large-gutters">
+    <div class="l-grid l-grid--3up">
     <biography-card
-      image="./assets/Placeholder-Image-1_1.png"
+      image="https://via.placeholder.com/300x300?text=1:1"
       altText="alternative text"
       name="John Doe 1"
       title="President, Google.com, Seattle"
@@ -69,7 +69,7 @@ export const InAGrid = () => ({
       </p>
     </biography-card>
     <biography-card
-      image="./assets/Placeholder-Image-1_1.png"
+      image="https://via.placeholder.com/300x300?text=1:1"
       altText="alternative text"
       name="John Doe 1"
       title="President, Google.com, Seattle"
@@ -85,7 +85,7 @@ export const InAGrid = () => ({
       </p>
     </biography-card>
     <biography-card
-      image="./assets/Placeholder-Image-1_1.png"
+      image="https://via.placeholder.com/300x300?text=1:1"
       altText="alternative text"
       name="John Doe 1"
       title="President, Google.com, Seattle"

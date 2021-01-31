@@ -11,12 +11,12 @@ export const MediaOnLeft = () => ({
       pretitle="pretitle"
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alt text"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -32,9 +32,9 @@ export const MediaOnRight = () => ({
       video="https://player.vimeo.com/video/90283590"
       alignment="right"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -46,13 +46,13 @@ export const MiddleAlignment = () => ({
       pretitle="pretitle"
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="alt text"
       verticalAlignment="middle"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -64,12 +64,12 @@ export const TwoThirdsLayout = () => ({
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
       cta="check this out"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       layout="2x3"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -81,13 +81,13 @@ export const TwoThirdsWithMediaOnRight = () => ({
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
       cta="check this out"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       layout="2x3"
       alignment="right"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -99,12 +99,12 @@ export const OneQuarterLayout = () => ({
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
       cta="check this out"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       layout="1x4"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })
@@ -116,13 +116,13 @@ export const OneQuarterWithMediaOnRight = () => ({
       title="Title Lorem Ipsum Dolor"
       link="http://www.google.com"
       cta="check this out"
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       layout="1x4"
       alignment="right"
     >
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
-         dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
-         Enim facilis ipsum odio praesentium quis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis
+       dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem?
+       Enim facilis ipsum odio praesentium quis.</p>
     </content-card>
   `
 })

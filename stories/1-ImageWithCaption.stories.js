@@ -8,7 +8,7 @@ export const WithGradient = () => ({
   components: { ImageWithCaption },
   template: `
     <image-with-caption
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="lorem ipsum dolor"
       caption="by john doe"
       link="http://www.bing.com"
@@ -20,7 +20,7 @@ export const WithoutGradient = () => ({
   components: { ImageWithCaption },
   template: `
     <image-with-caption
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="lorem ipsum dolor"
       caption="by john doe"
       link="http://www.bing.com"
@@ -33,7 +33,7 @@ export const WithoutALink = () => ({
   components: { ImageWithCaption },
   template: `
     <image-with-caption
-      image="./assets/Placeholder-Image-4_3.png"
+      image="https://via.placeholder.com/800x600?text=4:3"
       altText="lorem ipsum dolor"
       caption="by john doe"
     />

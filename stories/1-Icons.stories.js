@@ -42,31 +42,31 @@ export const GroupsOfIcons = () => ({
   components: { VIcons, VIconsItem },
   template: `
     <v-icons>
-      <v-icons-item
-        icon="fab fa-facebook-f"
-        link="https://www.facebook.com"
-        label="facebook"
-      />
-      <v-icons-item
-        icon="fab fa-twitter"
-        link="https://www.twitter.com"
-        label="twitter"
-      />
-      <v-icons-item
-        icon="fab fa-youtube"
-        link="https://www.youtube.com"
-        label="youtube"
-      />
-      <v-icons-item
-        icon="fab fa-instagram"
-        link="https://www.instagram.com"
-        label="instagram"
-      />
-      <v-icons-item
-        icon="fab fa-linkedin-in"
-        link="https://www.linkedin.com"
-        label="linkedin"
-      />
+    <v-icons-item
+      icon="fab fa-facebook-f"
+      link="https://www.facebook.com"
+      label="facebook"
+    />
+    <v-icons-item
+      icon="fab fa-twitter"
+      link="https://www.twitter.com"
+      label="twitter"
+    />
+    <v-icons-item
+      icon="fab fa-youtube"
+      link="https://www.youtube.com"
+      label="youtube"
+    />
+    <v-icons-item
+      icon="fab fa-instagram"
+      link="https://www.instagram.com"
+      label="instagram"
+    />
+    <v-icons-item
+      icon="fab fa-linkedin-in"
+      link="https://www.linkedin.com"
+      label="linkedin"
+    />
     </v-icons>
   `
 })
