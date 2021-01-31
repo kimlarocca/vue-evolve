@@ -9,6 +9,7 @@
     <slot>button</slot>
     <i
       v-if="hasIcon"
+      class="button-icon"
       :class="icon"
     />
   </a>
@@ -29,10 +30,7 @@ export default {
 }
 </script>
 
-<style
-  lang="scss"
-  scoped
->
+<style lang="scss">
 .button,
 .button:visited,
 .button:focus,
@@ -40,22 +38,24 @@ export default {
   cursor: pointer;
   display: inline-block;
   background: var(--button-background);
-  border: var(--button-border);
   color: var(--button-text);
+  border: var(--button-border);
   text-transform: var(--button-text-transform);
   font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
   padding: var(--button-padding);
   transition: var(--transition);
+  opacity: 1;
 
   &:hover {
     background: var(--button-background-hover);
     border: var(--button-border-hover);
     color: var(--button-text-hover);
+    opacity: var(--opacity-on-hover);
   }
+}
 
-  i {
-    margin-left: 0.5rem;
-  }
+.button-icon {
+  margin-left: 0.5rem;
 }
 </style>

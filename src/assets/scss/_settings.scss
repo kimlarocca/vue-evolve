@@ -1,15 +1,15 @@
 :root {
   // Colors
   --color-white: #ffffff;
-  --color-black: #000000;
-  --color-dark-gray: #333333;
-  --color-gray: #afafaf;
-  --color-light-gray: #f3f3f3;
-  --color-primary: #fce21b;
-  --color-secondary: #4a44f2;
-  --color-tertiary: #00ffc4;
-  --color-quaternary: #fc6a1b;
-  --color-quinary: #f244e1;
+  --color-black: #121212;
+  --color-dark-gray: #1E1E1E;
+  --color-gray: #383838;
+  --color-light-gray: #d9d9d9;
+  --color-primary: #71CCAE;
+  --color-secondary: #F4B16D;
+  --color-tertiary: #808EDA;
+  --color-quaternary: #64C4CE;
+  --color-quinary: #F3A893;
 
   // Fonts
   --font-family-primary: "Arial", sans-serif;
@@ -127,7 +127,7 @@
 
   // Layout
   --max-width: 1240px;
-  --grid-gutter: 18px;
+  --grid-gutter: 32px;
   --grid-gutter-large: 72px;
 
   // Animation
@@ -136,13 +136,17 @@
 
   // Main Styles
   --color-text: var(--color-black);
+  --color-text-inverse: var(--color-white);
   --color-background: var(--color-white);
+  --color-background-inverse: var(--color-black);
+  --color-background-muted: var(--color-light-gray);
+  --color-background-muted-inverse: var(--color-dark-gray);
   --font-family: var(--font-family-primary);
-  --color-hr: var(--color-gray);
+  --color-hr: var(--color-light-gray);
   --hr-height: 1px;
 
   // Links
-  --color-link: var(--color-secondary);
+  --color-link: var(--color-tertiary);
   --link-decoration: none;
   --color-link-hover: var(--color-black);
   --link-decoration-hover: none;
@@ -155,17 +159,17 @@
   --forms-input-font-family: var(--font-family);
   --forms-input-font-size: var(--font-base);
   --forms-input-color: var(--color-text);
-  --forms-input-border: 1px solid var(--color-gray);
-  --forms-input-outline-color: 1px solid var(--color-secondary);
+  --forms-input-border: 1px solid var(--color-background-muted);
+  --forms-input-outline-color: 1px solid var(--color-primary);
   --forms-inline-button-padding: 0 1rem;
 
   // Buttons
-  --button-background: var(--color-black);
+  --button-background: var(--color-primary);
   --button-text: var(--color-white);
-  --button-border: 2px solid var(--color-black);
-  --button-background-hover: var(--color-white);
-  --button-text-hover: var(--color-black);
-  --button-border-hover: 2px solid var(--color-black);
+  --button-border: 2px solid var(--color-primary);
+  --button-background-hover: var(--color-primary);
+  --button-text-hover: var(--color-white);
+  --button-border-hover: 2px solid var(--color-primary);
   --button-font-size: var(--font-size-3);
   --button-font-weight: 700;
   --button-text-transform: uppercase;
@@ -174,7 +178,7 @@
   // Menu
   --menu-width: 350px;
   --menu-text: var(--color-text);
-  --menu-background: var(--color-light-gray);
+  --menu-background: var(--color-background-muted);
 
   // Breadcrumbs
   --breadcrumbs-text: var(--color-text);
@@ -185,16 +189,17 @@
   --breadcrumbs-seperator-color: var(--color-text);
 
   // Cards
-  --card-background: var(--color-light-gray);
-  --card-header-background: var(--color-gray);
-  --card-color-link: var(--color-secondary);
+  --card-background: var(--color-background-muted);
+  --card-header-text: var(--color-text);
+  --card-header-background: var(--color-primary);
+  --card-color-link: var(--color-link);
 
   // Icons
-  --icon-color: var(--color-black);
+  --icon-color: var(--color-text);
   --icon-background-color: transparent;
-  --icon-color-hover: var(--color-secondary);
+  --icon-color-hover: var(--color-text);
   --icon-background-color-hover: transparent;
-  --icon-size: 1rem;
+  --icon-size: var(--font-base);
 
   // Image With Caption
   --image-with-caption-text: var(--color-white);
@@ -202,7 +207,7 @@
 
   // Callout Banner
   --callout-banner-text: var(--color-text);
-  --callout-banner-background-color: var(--color-light-gray);
+  --callout-banner-background-color: var(--color-background-muted);
 
   // Header
   --header-background: var(--color-background);
@@ -211,9 +216,86 @@
   --header-link-color-hover: var(--color-link);
 
   // Footer
-  --footer-color: var(--color-white);
-  --footer-link-color: var(--color-white);
-  --footer-background: var(--color-dark-gray);
+  --footer-color: var(--color-text);
+  --footer-link-color: var(--color-link);
+  --footer-background: var(--color-background-muted);
   --footer-padding: var(--space-6);
   --footer-alignment: center;
+}
+
+@mixin dark-mode {
+  // Colors
+  --color-white: #eaeaea;
+  --color-black: #121212;
+  --color-dark-gray: #1E1E1E;
+  --color-gray: #383838;
+  --color-light-gray: #f3f3f3;
+  --color-primary: #98DBC5;
+  --color-secondary: #F7C792;
+  --color-tertiary: #A5AEE4;
+  --color-quaternary: #64C4CE;
+  --color-quinary: #99DDE1;
+
+  // Main Styles
+  --color-text: var(--color-text-inverse);
+  --color-background: var(--color-background-inverse);
+  --color-background-muted: var(--color-dark-gray);
+  --color-background-highlighted: var(--color-light-gray);
+  --color-hr: var(--color-gray);
+
+  // Links
+  --color-link: var(--color-tertiary);
+  --color-link-hover: var(--color-white);
+
+  // Buttons
+  --button-background: var(--color-primary);
+  --button-text: var(--color-black);
+  --button-border: 2px solid var(--color-primary);
+  --button-background-hover: var(--color-primary);
+  --button-text-hover: var(--color-black);
+  --button-border-hover: 2px solid var(--color-primary);
+
+  // Menu
+  --menu-text: var(--color-text-inverse);
+  --menu-background: var(--color-background-muted-inverse);
+
+  // Forms
+  --forms-input-border: 1px solid var(--color-white);
+
+  // Breadcrumbs
+  --breadcrumbs-text: var(--color-text);
+  --breadcrumbs-seperator-color: var(--color-text);
+
+  // Callout Banner
+  --callout-banner-text: var(--color-text);
+  --callout-banner-background-color: var(--color-background-muted);
+
+  // Cards
+  --card-background: var(--color-background-muted);
+  --card-header-text: var(--color-black);
+  --card-header-background: var(--color-primary);
+  --card-color-link: var(--color-link);
+
+  // Icons
+  --icon-color: var(--color-text);
+  --icon-background-color: transparent;
+  --icon-color-hover: var(--color-text);
+  --icon-background-color-hover: transparent;
+
+  // Header
+  --header-background: var(--color-background);
+  --header-color: var(--color-text);
+  --header-link-color: var(--color-link);
+  --header-link-color-hover: var(--color-link);
+
+  // Footer
+  --footer-color: var(--color-text);
+  --footer-link-color: var(--color-link);
+  --footer-background: var(--color-background-muted);
+  --footer-padding: var(--space-6);
+  --footer-alignment: center;
+}
+
+.dark-mode {
+  @include dark-mode;
 }

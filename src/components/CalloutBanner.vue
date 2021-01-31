@@ -11,7 +11,7 @@
       <i class="fas fa-times" />
     </div>
     <div class="callout-banner-message">
-      <slot name="message" />
+      <slot />
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
   padding: var(--space-5);
 }
 
-.callout-banner .callout-banner-close {
+.callout-banner-close {
   position: absolute;
   cursor: pointer;
   top: var(--space-2);

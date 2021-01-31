@@ -29,3 +29,8 @@
     padding: 10px;
     background: white;
 }
+
+.dark-mode .colors > div span {
+    padding: 10px;
+    background: #000000;
+}

@@ -3,15 +3,15 @@
     class="header l-container"
     :class="[layout, {'responsive': responsive}]"
   >
-    <div class="left">
+    <div class="header-left">
       <slot
-        v-if="layout === 'left'"
         name="menu"
+        v-if="layout === 'left'"
         :class="{'responsive': responsive}"
       />
       <slot name="logo" />
     </div>
-    <div class="right">
+    <div class="header-right">
       <div class="header-secondary-navigation">
         <slot name="navigation" />
       </div>
@@ -41,9 +41,7 @@ export default {
 }
 </script>
 
-<style
-  lang="scss"
->
+<style lang="scss">
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,8 +61,8 @@ export default {
   }
 }
 
-.header .left,
-.header .right {
+.header-left,
+.header-right {
   display: flex;
   align-items: center;
 }

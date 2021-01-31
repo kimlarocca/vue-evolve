@@ -7,26 +7,37 @@ export default {
 export const Standard = () => ({
   components: { VButton },
   template: `
-    <div class="sbdocs-large-container">
-      <v-button href="http://www.google.com">Test Button</v-button>
-    </div>
-`
+    <v-button href="http://www.google.com">Test Button</v-button>
+  `
 })
 
 export const WithoutLink = () => ({
   components: { VButton },
   template: `
-    <div class="sbdocs-large-container">
-      <v-button>Test Button</v-button>
-    </div>
-`
+    <v-button>Test Button</v-button>
+  `
 })
 
 export const WithIcon = () => ({
   components: { VButton },
   template: `
-    <div class="sbdocs-large-container">
-      <v-button icon="fas fa-long-arrow-alt-right" href="http://www.google.com">Test Button</v-button>
-    </div>
-`
+    <v-button
+      icon="fas fa-long-arrow-alt-right"
+      href="http://www.google.com"
+    >
+      Test Button
+    </v-button>
+  `
+})
+
+export const OpensInANewWindow = () => ({
+  components: { VButton },
+  template: `
+    <v-button
+      target="_blank"
+      href="http://www.google.com"
+    >
+      Test Button
+    </v-button>
+  `
 })

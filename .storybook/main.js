@@ -11,7 +11,8 @@ module.exports = {
         configureJSX: true,
       }
     },
-    "@storybook/addon-essentials"
+    '@storybook/addon-essentials',
+    'storybook-addon-themes'
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

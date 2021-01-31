@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import SocialLink from '../components/SocialLink'
+import SocialLink from './VIcons'
 import SecondaryNavigation from '../components/SecondaryNavigation'
 import VSpacer from '../components/VSpacer'
 
@@ -94,9 +94,9 @@ export default {
   }
 }
 
-.footer .footer-social li a,
-.footer .footer-social li a:visited,
-.footer footer-social li a:active {
+.footer-social li a,
+.footer-social li a:visited,
+footer-social li a:active {
   color: var(--footer-color);
   padding-bottom: 0;
   border-bottom: none;

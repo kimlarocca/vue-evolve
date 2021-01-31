@@ -1,10 +1,10 @@
-import VHeader from '../src/components/VHeader'
-import VMenu from '../src/components/VMenu'
+import VHeader from '../src/components/TheHeader'
+import VMenu from '../src/components/TheMenu'
 import VButton from '../src/components/VButton'
 import SecondaryNavigation from '../src/components/SecondaryNavigation'
 
 export default {
-  title: 'Components/Header'
+  title: 'Components/The Header'
 }
 
 export const MenuOnLeft = () => ({

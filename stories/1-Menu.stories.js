@@ -1,43 +1,48 @@
-import VMenu from '../src/components/VMenu'
+import VMenu from '../src/components/TheMenu'
 import VButton from '../src/components/VButton'
-import SocialLink from '../src/components/SocialLink'
+import VIcons from '../src/components/VIcons'
+import VIconsItem from '../src/components/VIconsItem'
 
 export default {
-  title: 'Components/Menu'
+  title: 'Components/The Menu'
 }
 
 export const OnTheLeft = () => ({
-  components: { VMenu, VButton, SocialLink },
+  components: { VMenu, VButton, VIcons, VIconsItem },
   template: `
     <v-menu
-      :primaryNav="[
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 1',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 2',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 3',
-                    }
-                  ]"
-      :secondaryNav="[
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 1',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 2',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 3',
-                    }
-                  ]"
+      :primaryNav="
+        [
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 1',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 2',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 3',
+          }
+        ]
+      "
+      :secondaryNav="
+        [
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 1',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 2',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 3',
+          }
+        ]
+    "
     >
     <template v-slot:logo>
       <img
@@ -54,76 +59,75 @@ export const OnTheLeft = () => ({
       <p class="u-align--center"><em>slot for component</em></p>
     </template>
     <template v-slot:social>
-      <ul class="social-links">
-        <social-link
+      <v-icons>
+        <v-icons-item
           icon="fab fa-facebook-f"
           link="https://www.facebook.com"
           label="facebook"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-twitter"
           link="https://www.twitter.com"
           label="twitter"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-youtube"
           link="https://www.youtube.com"
           label="youtube"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-instagram"
           link="https://www.instagram.com"
           label="instagram"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-linkedin-in"
           link="https://www.linkedin.com"
           label="linkedin"
-        >
-        </social-link>
-      </ul>
+        />
+      </v-icons>
     </template>
     </v-menu>
   `
 })
 
 export const OnTheRight = () => ({
-  components: { VMenu, VButton, SocialLink },
+  components: { VMenu, VButton, VIcons, VIconsItem },
   template: `
     <v-menu
       layout="right"
-      :primaryNav="[
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 1',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 2',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Primary Link 3',
-                    }
-                  ]"
-      :secondaryNav="[
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 1',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 2',
-                    },
-                    {
-                      url: 'http://www.google.com',
-                      text: 'Secondary Link 3',
-                    }
-                  ]"
+      :primaryNav="
+        [
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 1',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 2',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Primary Link 3',
+          }
+        ]
+      "
+      :secondaryNav="
+        [
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 1',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 2',
+          },
+          {
+            url: 'http://www.google.com',
+            text: 'Secondary Link 3',
+          }
+        ]
+    "
     >
     <template v-slot:logo>
       <img
@@ -140,38 +144,33 @@ export const OnTheRight = () => ({
       <p class="u-align--center"><em>slot for component</em></p>
     </template>
     <template v-slot:social>
-      <ul class="social-links">
-        <social-link
+      <v-icons>
+        <v-icons-item
           icon="fab fa-facebook-f"
           link="https://www.facebook.com"
           label="facebook"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-twitter"
           link="https://www.twitter.com"
           label="twitter"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-youtube"
           link="https://www.youtube.com"
           label="youtube"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-instagram"
           link="https://www.instagram.com"
           label="instagram"
-        >
-        </social-link>
-        <social-link
+        />
+        <v-icons-item
           icon="fab fa-linkedin-in"
           link="https://www.linkedin.com"
           label="linkedin"
-        >
-        </social-link>
-      </ul>
+        />
+      </v-icons>
     </template>
     </v-menu>
   `

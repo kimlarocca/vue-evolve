@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/CSS Guidelines" />
+
+# CSS Guidelines
+
+For our CSS we roughly follow the [Trello CSS Style Guide](https://github.com/trello/trellisheets/blob/master/styleguide.md).
+
+### CSS Variables
+
+For variables, we use CSS variables, usually scoped to the root element:
+
+```
+:root {
+  --menu-width: 350px;
+}
+```
+
+Here is how to use CSS variables in your styles:
+
+```
+.menu {
+  width: var(--menu-width);
+}
+```
+
+### Component Styles
+
+Use the `.component-descendant-descendant` pattern for components:
+
+```
+<div class="card">
+  <h3 class="card-title">
+    <a class="card-title-link">{{title}}</a>
+  </h3>
+  <div class="card-body">{{body}}</div>
+</div>
+```

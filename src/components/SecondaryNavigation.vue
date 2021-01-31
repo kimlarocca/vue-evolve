@@ -1,26 +1,27 @@
 <template>
   <div>
     <ul
-      class="secondary-navigation"
-      :class="orientation"
+        class="secondary-navigation"
+        :class="orientation"
     >
       <li
-        v-for="(item, index) in navItems"
-        :key="index"
-        class="secondary-navigation-item"
+          v-for="(item, index) in navItems"
+          :key="index"
+          class="secondary-navigation-item"
       >
         <a
-          v-if="item.url"
-          :href="item.url"
-          target="_blank"
-          rel="noopener"
+            v-if="item.url"
+            :href="item.url"
+            target="_blank"
+            rel="noopener"
+            class="secondary-navigation-item-link"
         >
           {{ item.text }}
         </a>
         <router-link
-          v-else
-          :to="item.route"
-          :data-test-seconary-nav-link="index"
+            v-else
+            :to="item.route"
+            class="secondary-navigation-item-link"
         >
           {{ item.text }}
         </router-link>
@@ -50,7 +51,7 @@ export default {
   list-style: none;
 }
 
-.secondary-navigation .secondary-navigation-item {
+.secondary-navigation-item {
   margin-bottom: var(--space-2);
 }
 

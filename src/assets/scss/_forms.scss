@@ -11,7 +11,8 @@ input[type='text'],
 input[type='email'],
 input[type='number'],
 input[type='password'],
-select {
+select,
+textarea {
   display: block;
   @extend .form-element-styles;
   height: var(--forms-input-height);
@@ -33,6 +34,16 @@ select {
 label {
   display: block;
   clear: both;
+
+  input,
+  textarea,
+  select {
+    margin-top: var(--space-2);
+  }
+}
+
+legend {
+  margin-bottom: var(--space-2);
 }
 
 fieldset {
@@ -78,10 +89,27 @@ select[multiple] {
   width: 100%;
   align-items: stretch;
 
-  .button {
+  input {
+    margin-top: var(--space-2);
+  }
+
+  .button,
+  .button:focus,
+  .button:active,
+  .button:visited {
+    background: var(--button-background);
+    color: var(--button-text);
     height: var(--forms-input-height);
     line-height: var(--forms-input-height);
-    padding: var(--forms-inline-button-padding);
     cursor: pointer;
+    opacity: 1;
+    transition: var(--transition);
+    padding: var(--forms-inline-button-padding);
+
+    &:hover {
+      background: var(--button-background-hover);
+      color: var(--button-text-hover);
+      opacity: var(--opacity-on-hover);
+    }
   }
 }

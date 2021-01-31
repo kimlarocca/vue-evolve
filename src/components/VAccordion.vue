@@ -15,7 +15,7 @@
       <div class="accordion-header-wrapper">
         <slot name="header" />
       </div>
-      <div class="accordion-icon">
+      <div class="accordion-header-icon">
         <i class="fas fa-angle-down" />
       </div>
     </div>
@@ -79,24 +79,24 @@ export default {
 </script>
 
 <style lang="scss">
-.accordion .accordion-header {
+.accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
-.accordion .accordion-header-wrapper {
+.accordion-header-wrapper {
   width: 100%;
   padding-right: var(--space-2);
 }
 
-.accordion .accordion-icon {
+.accordion-header-icon {
   font-size: 30px;
   transition: var(--transition);
 }
 
-.accordion .accordion-header-active .accordion-icon {
+.accordion-header-active .accordion-header-icon {
   transform: rotate(180deg);
 }
 
@@ -108,7 +108,8 @@ export default {
   transition: all var(--transition) ease-out;
 }
 
-.accordion-enter, .accordion-leave-to {
+.accordion-enter,
+.accordion-leave-to {
   max-height: 0 !important; // needs important to override inline style
   opacity: 0;
 }
