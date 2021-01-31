@@ -1,5 +1,5 @@
-import VHeader from '../src/components/TheHeader'
-import VMenu from '../src/components/TheMenu'
+import TheHeader from '../src/components/TheHeader'
+import TheMenu from '../src/components/TheMenu'
 import VButton from '../src/components/VButton'
 import SecondaryNavigation from '../src/components/SecondaryNavigation'
 
@@ -8,9 +8,9 @@ export default {
 }
 
 export const MenuOnLeft = () => ({
-  components: { VHeader, VMenu, VButton, SecondaryNavigation },
+  components: { TheHeader, TheMenu, VButton, SecondaryNavigation },
   template: `
-    <v-header
+    <the-header
       layout="left"
     >
     <template v-slot:logo>
@@ -25,7 +25,7 @@ export const MenuOnLeft = () => ({
       </v-button>
     </template>
     <template v-slot:menu>
-      <v-menu
+      <the-menu
         layout="left"
         :primaryNav="[
                     {
@@ -104,15 +104,15 @@ export const MenuOnLeft = () => ({
             </social-link>
           </ul>
         </template>
-      </v-menu>
+      </the-menu>
     </template>
-    </v-header>`
+    </the-header>`
 })
 
 export const MenuOnRight = () => ({
-  components: { VHeader, VMenu, VButton, SecondaryNavigation },
+  components: { TheHeader, TheMenu, VButton, SecondaryNavigation },
   template: `
-    <v-header
+    <the-header
       layout="right"
     >
     <template v-slot:logo>
@@ -127,7 +127,7 @@ export const MenuOnRight = () => ({
       </v-button>
     </template>
     <template v-slot:menu>
-      <v-menu
+      <the-menu
         layout="right"
         :primaryNav="[
                     {
@@ -206,15 +206,15 @@ export const MenuOnRight = () => ({
             </social-link>
           </ul>
         </template>
-      </v-menu>
+      </the-menu>
     </template>
-    </v-header>`
+    </the-header>`
 })
 
 export const ResponsiveMenuOnLeft = () => ({
-  components: { VHeader, VMenu, VButton, SecondaryNavigation },
+  components: { TheHeader, TheMenu, VButton, SecondaryNavigation },
   template: `
-    <v-header
+    <the-header
       layout="left"
       :responsive="true"
     >
@@ -230,7 +230,7 @@ export const ResponsiveMenuOnLeft = () => ({
       </v-button>
     </template>
     <template v-slot:menu>
-      <v-menu
+      <the-menu
         layout="left"
         :primaryNav="[
                     {
@@ -309,7 +309,7 @@ export const ResponsiveMenuOnLeft = () => ({
             </social-link>
           </ul>
         </template>
-      </v-menu>
+      </the-menu>
     </template>
     <template v-slot:navigation>
       <secondary-navigation
@@ -330,13 +330,13 @@ export const ResponsiveMenuOnLeft = () => ({
       ]"
       />
     </template>
-    </v-header>`
+    </the-header>`
 })
 
 export const ResponsiveMenuOnRight = () => ({
-  components: { VHeader, VMenu, VButton, SecondaryNavigation },
+  components: { TheHeader, TheMenu, VButton, SecondaryNavigation },
   template: `
-    <v-header
+    <the-header
       layout="right"
       :responsive="true"
     >
@@ -352,7 +352,7 @@ export const ResponsiveMenuOnRight = () => ({
       </v-button>
     </template>
     <template v-slot:menu>
-      <v-menu
+      <the-menu
         layout="right"
         :primaryNav="[
                     {
@@ -431,7 +431,7 @@ export const ResponsiveMenuOnRight = () => ({
             </social-link>
           </ul>
         </template>
-      </v-menu>
+      </the-menu>
     </template>
     <template v-slot:navigation>
       <secondary-navigation
@@ -452,5 +452,5 @@ export const ResponsiveMenuOnRight = () => ({
       ]"
       />
     </template>
-    </v-header>`
+    </the-header>`
 })
