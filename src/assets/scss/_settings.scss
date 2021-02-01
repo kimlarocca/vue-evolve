@@ -137,6 +137,7 @@
   // Main Styles
   --color-text: var(--color-black);
   --color-text-inverse: var(--color-white);
+  --color-text-error: #cc0000;
   --color-background: var(--color-white);
   --color-background-inverse: var(--color-black);
   --color-background-muted: var(--color-light-gray);
@@ -238,6 +239,7 @@
 
   // Main Styles
   --color-text: var(--color-text-inverse);
+  --color-text-error: #ffbcbc;
   --color-background: var(--color-background-inverse);
   --color-background-muted: var(--color-dark-gray);
   --color-background-highlighted: var(--color-light-gray);

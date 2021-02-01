@@ -73,6 +73,13 @@ textarea {
   }
 }
 
+textarea + p {
+  @include typeface(body, 2);
+  color: RGB(var(--color-text-muted));
+  margin-top: var(--space-1);
+  text-align: right;
+}
+
 select {
   option {
     @extend .form-element-styles;
@@ -110,6 +117,34 @@ select[multiple] {
       background: var(--button-background-hover);
       color: var(--button-text-hover);
       opacity: var(--opacity-on-hover);
+    }
+  }
+}
+
+// error styles
+label.error {
+  input,
+  select,
+  textarea {
+    border: solid 1px var(--color-text-error);
+  }
+
+  p {
+    @include typeface(body, 2);
+    color: var(--color-text-error);
+    margin-top: var(--space-1);
+  }
+}
+
+// disabled styles
+label.disabled {
+  input,
+  select,
+  textarea {
+    background-color: var(--color-background-muted);
+
+    &::placeholder {
+      color: var(--color-text);
     }
   }
 }

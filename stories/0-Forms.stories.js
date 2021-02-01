@@ -58,3 +58,48 @@ export const Forms = () => ({
     </div>
   `
 })
+
+export const TextareaCharacterCount = () => ({
+  data: () => ({
+    textarea: '',
+    maxCharacters: 10,
+  }),
+  template: `
+    <div>
+    <label :class="{'error': maxCharacters-textarea.length < 0}">Textarea with Character Count
+      <textarea
+        v-model="textarea"
+        placeholder="placeholder text"
+      />
+      <p>{{ maxCharacters - textarea.length }} Characters Remaining</p>
+    </label>
+    </div>
+  `
+})
+
+export const DisabledState = () => ({
+  template: `
+    <label class="disabled">Disabled Input
+      <input
+      disabled
+      aria-disabled="true"
+      type="text"
+      placeholder="placeholder text"
+      >
+    </label>
+  `
+})
+
+export const ErrorState = () => ({
+  template: `
+    <label class="required error">Error Input
+        <input
+        required
+        aria-required="true"
+        type="text"
+        placeholder="placeholder text"
+        >
+        <p class="error">Error text lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </label>
+  `
+})
