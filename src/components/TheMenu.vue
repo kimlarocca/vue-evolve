@@ -115,12 +115,16 @@ export default {
   },
   methods: {
     toggleMenu () {
-      this.$nextTick(() => this.menuOpen = !this.menuOpen)
+      this.$nextTick(() => {
+        this.menuOpen = !this.menuOpen
+      })
     }
   },
-  beforeRouteLeave (to, from, next) {
-    // close the menu if a router link is clicked on
-    this.menuOpen = false
+  watch: {
+    // close the menu if the route changes
+    '$route' () {
+      this.menuOpen = false
+    }
   }
 }
 </script>

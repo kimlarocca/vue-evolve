@@ -1,4 +1,4 @@
-import VMenu from '../src/components/TheMenu'
+import TheMenu from '../src/components/TheMenu'
 import VButton from '../src/components/VButton'
 import VIcons from '../src/components/VIcons'
 import VIconsItem from '../src/components/VIconsItem'
@@ -8,9 +8,9 @@ export default {
 }
 
 export const OnTheLeft = () => ({
-  components: { VMenu, VButton, VIcons, VIconsItem },
+  components: { TheMenu, VButton, VIcons, VIconsItem },
   template: `
-    <v-menu
+    <the-menu
       :primaryNav="
         [
           {
@@ -87,14 +87,14 @@ export const OnTheLeft = () => ({
         />
       </v-icons>
     </template>
-    </v-menu>
+    </the-menu>
   `
 })
 
 export const OnTheRight = () => ({
-  components: { VMenu, VButton, VIcons, VIconsItem },
+  components: { TheMenu, VButton, VIcons, VIconsItem },
   template: `
-    <v-menu
+    <the-menu
       layout="right"
       :primaryNav="
         [
@@ -172,6 +172,6 @@ export const OnTheRight = () => ({
         />
       </v-icons>
     </template>
-    </v-menu>
+    </the-menu>
   `
 })
