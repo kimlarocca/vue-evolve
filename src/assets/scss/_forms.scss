@@ -121,6 +121,15 @@ select[multiple] {
   }
 }
 
+// required styles
+label.required {
+  &::before {
+    content: '*';
+    margin-right: var(--space-1);
+    color: var(--color-text-error);
+  }
+}
+
 // error styles
 label.error {
   input,

@@ -10,16 +10,28 @@ A Design System is the single source of truth which groups all the elements that
 
 #### Installation
 
-`npm install vue-evolve` to pull them in to your web client's vue app.
+```
+npm install vue-evolve --save-dev
+```
 
-In your web client's main scss file, import vue-evolve's styles:
+Import the vue-evolve main style sheet in your application:
 
 ```
 @import "~vue-evolve/src/assets/scss/main";
 ```
 
+#### Nuxt Configuration
+
+Add this to your nuxt.config.js file to import components for use with SSR:
+
+```
+build: {
+  transpile: ['vue-evolve']
+}
+```
+
 #### Theming
 
-Evolve uses CSS variables that allow us to style components in a way that's consistent and flexible.
+Vue Evolve uses CSS variables that allow us to style components in a way that's consistent and flexible. We also maintain both a light (default) mode and dark mode for our components.
 
-Copy the settings.scss file into your web client to customize vue-evolve to match your theme.
+Copy the settings.scss file into your application to customize Vue Evolve to match your theme. Create override files as needed for further customization!

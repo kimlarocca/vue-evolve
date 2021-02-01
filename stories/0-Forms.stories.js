@@ -65,7 +65,6 @@ export const TextareaCharacterCount = () => ({
     maxCharacters: 10,
   }),
   template: `
-    <div>
     <label :class="{'error': maxCharacters-textarea.length < 0}">Textarea with Character Count
       <textarea
         v-model="textarea"
@@ -73,7 +72,19 @@ export const TextareaCharacterCount = () => ({
       />
       <p>{{ maxCharacters - textarea.length }} Characters Remaining</p>
     </label>
-    </div>
+  `
+})
+
+export const RequiredState = () => ({
+  template: `
+    <label class="required">Required Input
+        <input
+        type="text"
+        placeholder="placeholder text"
+        required
+        aria-required="true"
+        >
+    </label>
   `
 })
 
@@ -92,10 +103,8 @@ export const DisabledState = () => ({
 
 export const ErrorState = () => ({
   template: `
-    <label class="required error">Error Input
+    <label class="error">Error Input
         <input
-        required
-        aria-required="true"
         type="text"
         placeholder="placeholder text"
         >
