@@ -39,6 +39,12 @@ export const Grid = () => ({
         <div class="u-background-color--muted u-padding--half u-align--center">1/4 Column</div>
         <div class="u-background-color--muted u-padding--half u-align--center">3/4 Column</div>
       </div>
+      <div class="l-grid l-grid--4-2-1 u-space--bottom">
+        <div class="u-background-color--muted u-padding--half u-align--center">4/2/1 Column</div>
+        <div class="u-background-color--muted u-padding--half u-align--center">4/2/1 Column</div>
+        <div class="u-background-color--muted u-padding--half u-align--center">4/2/1 Column</div>
+        <div class="u-background-color--muted u-padding--half u-align--center">4/2/1 Column</div>
+      </div>
       <div class="l-grid l-grid--4x1 l-grid--full-width-small u-space--double--bottom">
         <div class="u-background-color--muted u-padding--half u-align--center">3/4 Column</div>
         <div class="u-background-color--muted u-padding--half u-align--center">1/4 Column</div>
