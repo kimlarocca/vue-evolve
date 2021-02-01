@@ -96,7 +96,7 @@ export default {
     rightAligned () {
       return this.$props.alignment === 'right'
     },
-    verticalAlignment () {
+    verticalAlignmentClass () {
       if (this.$props.verticalAlignment === 'middle') {
         return 'l-grid--middle'
       } else {
@@ -108,19 +108,19 @@ export default {
     getLayout () {
       if (this.$props.alignment === 'right') {
         if (this.$props.layout === '2x3') {
-          return 'l-grid--3x2 l-grid--1up--small ' + this.verticalAlignment
+          return 'l-grid--3x2 l-grid--1up--small ' + this.verticalAlignmentClass
         } else if (this.$props.layout === '1x4') {
-          return 'l-grid--4x1 l-grid--1up--small ' + this.verticalAlignment
+          return 'l-grid--4x1 l-grid--1up--small ' + this.verticalAlignmentClass
         } else {
-          return 'l-grid--2up ' + this.verticalAlignment
+          return 'l-grid--2up ' + this.verticalAlignmentClass
         }
       } else {
         if (this.$props.layout === '2x3') {
-          return 'l-grid--2x3 l-grid--1up--small ' + this.verticalAlignment
+          return 'l-grid--2x3 l-grid--1up--small ' + this.verticalAlignmentClass
         } else if (this.$props.layout === '1x4') {
-          return 'l-grid--1x4 l-grid--1up--small ' + this.verticalAlignment
+          return 'l-grid--1x4 l-grid--1up--small ' + this.verticalAlignmentClass
         } else {
-          return 'l-grid--2up ' + this.verticalAlignment
+          return 'l-grid--2up ' + this.verticalAlignmentClass
         }
       }
     }
