@@ -12,6 +12,7 @@
         <img
           :src="image"
           :alt="altText"
+          loading="lazy"
         >
       </div>
       <div

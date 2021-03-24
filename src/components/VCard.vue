@@ -17,6 +17,7 @@
       :src="image"
       :alt="altText"
       class="card-image"
+      loading="lazy"
     />
     <div v-if="video">
       <media-block :url="video" />

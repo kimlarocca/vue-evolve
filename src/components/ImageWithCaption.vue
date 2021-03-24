@@ -10,6 +10,7 @@
       :src="image"
       :alt="altText"
       class="image-with-caption-image"
+      loading="lazy"
     >
     <div
       v-if="hasCaption"
