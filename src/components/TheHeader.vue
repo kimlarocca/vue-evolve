@@ -34,7 +34,7 @@ export default {
       default: 'left'
     },
     responsive: {
-      type: String,
+      type: Boolean,
       default: false
     }
   }
