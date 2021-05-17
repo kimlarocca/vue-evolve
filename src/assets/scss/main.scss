@@ -17,7 +17,7 @@
 body,
 html {
   background-color: var(--color-background);
-  @include typeface(body, 5);
+  @include typeface(primary, 5);
   color: var(--color-text);
   width: 100%;
   height: 100%;
