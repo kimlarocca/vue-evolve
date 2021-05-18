@@ -84,6 +84,11 @@ export default {
   text-align: var(--footer-alignment);
 }
 
+.footer p {
+  color: var(--footer-color);
+  font-size: var(--footer-font-size);
+}
+
 .footer a,
 .footer a:visited,
 .footer a:active {
