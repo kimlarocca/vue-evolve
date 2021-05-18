@@ -1,5 +1,3 @@
-// Headers
-
 @mixin typeface($type, $size) {
   font-family: var(--font-family-#{$type});
   letter-spacing: var(--letter-spacing-#{$type});

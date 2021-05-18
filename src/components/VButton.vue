@@ -41,7 +41,7 @@ export default {
   color: var(--button-text);
   border: var(--button-border);
   text-transform: var(--button-text-transform);
-  @include typeface(primary, 5);
+  font-family: var(--font-family-primary);
   font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
   padding: var(--button-padding);
