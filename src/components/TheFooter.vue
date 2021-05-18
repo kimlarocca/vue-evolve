@@ -80,6 +80,7 @@ export default {
   padding: var(--footer-padding);
   background: var(--footer-background);
   color: var(--footer-color);
+  font-size: var(--footer-font-size);
   text-align: var(--footer-alignment);
 }
 
@@ -87,6 +88,8 @@ export default {
 .footer a:visited,
 .footer a:active {
   color: var(--footer-link-color);
+  font-size: var(--footer-font-size);
+  font-family: var(--font-family-primary);
 
   &:hover {
     color: var(--footer-color);
@@ -96,7 +99,7 @@ export default {
 
 .footer-social li a,
 .footer-social li a:visited,
-footer-social li a:active {
+.footer-social li a:active {
   color: var(--footer-color);
   padding-bottom: 0;
   border-bottom: none;
