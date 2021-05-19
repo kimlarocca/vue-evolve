@@ -86,12 +86,14 @@
 // ordering
 
 .l-grid--order-1-large {
+  order: 2;
   @media all and (min-width: $medium) {
     order: 1;
   }
 }
 
 .l-grid--order-2-large {
+  order: 1;
   @media all and (min-width: $medium) {
     order: 2;
   }
