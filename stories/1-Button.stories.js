@@ -7,7 +7,7 @@ export default {
 export const Standard = () => ({
   components: { VButton },
   template: `
-    <v-button href="http://www.google.com">Test Button</v-button>
+    <v-button href="https://www.google.com">Test Button</v-button>
   `
 })
 
@@ -23,10 +23,21 @@ export const WithIcon = () => ({
   template: `
     <v-button
       icon="fas fa-long-arrow-alt-right"
-      href="http://www.google.com"
+      href="https://www.google.com"
     >
       Test Button
     </v-button>
+  `
+})
+
+export const IconOnly = () => ({
+  components: { VButton },
+  template: `
+    <v-button
+      class="icon-only"
+      icon="fas fa-cog"
+      href="https://www.google.com"
+    />
   `
 })
 
@@ -35,7 +46,7 @@ export const OpensInANewWindow = () => ({
   template: `
     <v-button
       target="_blank"
-      href="http://www.google.com"
+      href="https://www.google.com"
     >
       Test Button
     </v-button>

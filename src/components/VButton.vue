@@ -6,7 +6,7 @@
     :href="href"
     @click="$emit('click', $event);"
   >
-    <slot>button</slot>
+    <slot />
     <i
       v-if="hasIcon"
       class="button-icon"
@@ -58,5 +58,23 @@ export default {
 
 .button-icon {
   margin-left: 0.5rem;
+}
+
+.button.icon-only {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-text);
+
+  &:hover {
+    border: none;
+    background: none;
+    color: var(--color-text);
+    opacity: var(--opacity-on-hover);
+  }
+
+  .button-icon {
+    margin-left: 0;
+  }
 }
 </style>
