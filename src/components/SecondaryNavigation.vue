@@ -18,6 +18,12 @@
         >
           {{ item.text }}
         </a>
+        <nuxt-link
+          v-else-if="item.to && item.type === 'nuxt'"
+          :to="item.route"
+          rel="noopener"
+          class="secondary-navigation-item-link"
+        />
         <router-link
             v-else
             :to="item.route"

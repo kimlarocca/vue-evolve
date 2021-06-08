@@ -1,5 +1,7 @@
 import '!style-loader!css-loader!sass-loader!./storybook-styles.css';
 import '!style-loader!css-loader!sass-loader!../src/assets/scss/main.scss';
+import Vue from 'vue'
+import { action } from '@storybook/addon-actions'
 
 export const parameters = {
   themes: [
@@ -12,3 +14,23 @@ export const parameters = {
     },
   },
 };
+
+Vue.component('nuxt-link', {
+  props:   ['route'],
+  methods: {
+    log() {
+      action('link target')(this.route)
+    },
+  },
+  template: '<a :href="route" @click.prevent="log()"><slot>NuxtLink</slot></a>',
+})
+
+Vue.component('router-link', {
+  props:   ['route'],
+  methods: {
+    log() {
+      action('link target')(this.route)
+    },
+  },
+  template: '<a :href="route" @click.prevent="log()"><slot>RouterLink</slot></a>',
+})
