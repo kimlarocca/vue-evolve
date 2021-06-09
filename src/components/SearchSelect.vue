@@ -59,7 +59,7 @@ export default {
       required: false,
       default: false
     },
-    maxItem: {
+    maxItems: {
       type: Number,
       required: false,
       default: 6
@@ -81,7 +81,7 @@ export default {
       const regOption = new RegExp(this.searchFilter, 'ig');
       for (const option of this.options) {
         if (this.searchFilter.length < 1 || option.name.match(regOption)) {
-          if (filtered.length < this.maxItem) filtered.push(option);
+          if (filtered.length < this.maxItems) filtered.push(option);
         }
       }
       return filtered;
