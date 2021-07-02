@@ -83,6 +83,16 @@
   }
 }
 
+.l-grid--3-2-1 {
+  grid-template-columns: repeat(1, 1fr);
+  @media all and (min-width: $medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media all and (min-width: $large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 // ordering
 
 .l-grid--order-1-large {
