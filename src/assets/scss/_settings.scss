@@ -57,35 +57,40 @@
 
   // Typography (based on modular scale set above)
 
-  h1 {
+  h1,
+  .like-h1 {
     @include typeface(primary, 9);
     @media all and (min-width: $medium) {
       @include typeface(primary, 14);
     }
   }
 
-  h2 {
+  h2,
+  .like-h2 {
     @include typeface(primary, 8);
     @media all and (min-width: $medium) {
       @include typeface(primary, 13);
     }
   }
 
-  h3 {
+  h3,
+  .like-h3 {
     @include typeface(primary, 7);
     @media all and (min-width: $medium) {
       @include typeface(primary, 12);
     }
   }
 
-  h4 {
+  h4,
+  .like-h4 {
     @include typeface(primary, 6);
     @media all and (min-width: $medium) {
       @include typeface(heaprimaryder, 10);
     }
   }
 
-  h5 {
+  h5,
+  .like-h5 {
     @include typeface(primary, 5);
     @media all and (min-width: $medium) {
       @include typeface(primary, 7);
@@ -93,7 +98,8 @@
     text-transform: uppercase;
   }
 
-  h6 {
+  h6,
+  .like-h6 {
     @include typeface(primary, 5);
     @media all and (min-width: $medium) {
       @include typeface(primary, 7);
