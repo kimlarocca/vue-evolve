@@ -16,7 +16,7 @@
         <slot name="header" />
       </div>
       <div class="accordion-header-icon">
-        <i class="fas fa-angle-down" />
+        <i class="fal fa-angle-down" />
       </div>
     </div>
     <transition name="accordion">
