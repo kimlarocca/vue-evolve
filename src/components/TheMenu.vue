@@ -7,7 +7,7 @@
       class="menu-hamburger"
       @click="toggleMenu"
     >
-      <i class="fas fa-bars" />
+      <i class="fal fa-bars" />
     </div>
     <transition :name="transitionName">
       <nav
@@ -18,7 +18,7 @@
           class="menu-close"
           @click="menuOpen = false"
         >
-          <i class="fas fa-times" />
+          <i class="fal fa-times" />
         </div>
         <div
           v-if="hasLogoSlot"
