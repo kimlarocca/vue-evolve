@@ -96,6 +96,10 @@ export default {
   transition: var(--transition);
 }
 
+.accordion-content {
+  display: inline-block;
+}
+
 .accordion-header-active .accordion-header-icon {
   transform: rotate(180deg);
 }
