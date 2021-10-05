@@ -121,6 +121,20 @@
   }
 }
 
+.l-grid--order-1-xlarge {
+  order: 2;
+  @media all and (min-width: $large) {
+    order: 1;
+  }
+}
+
+.l-grid--order-2-xlarge {
+  order: 1;
+  @media all and (min-width: $large) {
+    order: 2;
+  }
+}
+
 // alignment
 
 .l-grid--top {
