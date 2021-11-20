@@ -1,10 +1,10 @@
 <template>
   <div class="card">
     <div
-      v-if="title"
-      class="card-title u-padding"
+      v-if="tag"
+      class="card-tag"
     >
-      {{ title }}
+      {{ tag }}
     </div>
     <a
       v-if="link"
@@ -19,18 +19,24 @@
       class="card-image"
       loading="lazy"
     />
-    <div v-if="video">
+    <template v-if="video">
       <media-block :url="video" />
-    </div>
-    <div class="card-content u-padding">
+    </template>
+    <div class="card-content">
       <i
         v-if="icon"
         :class="icon"
         class="card-icon"
       />
       <div
+        v-if="title"
+        class="card-title"
+      >
+        {{ title }}
+      </div>
+      <div
         v-if="subtitle"
-        class="card-subtitle u-space--bottom"
+        class="card-subtitle"
       >
         {{ subtitle }}
       </div>
@@ -41,7 +47,7 @@
         {{ description }}
       </div>
       <template v-if="hasTextLink">
-        <div class="card-cta u-space--top">
+        <div class="card-cta">
           {{ cta }}
         </div>
       </template>
@@ -58,12 +64,30 @@ export default {
     'media-block': MediaBlock
   },
   props: {
-    title: String,
-    video: String,
-    image: String,
-    altText: String,
-    subtitle: String,
-    description: String,
+    title: {
+      type: String,
+      default: null
+    },
+    video: {
+      type: String,
+      default: null
+    },
+    image: {
+      type: String,
+      default: null
+    },
+    altText: {
+      type: String,
+      default: null
+    },
+    subtitle: {
+      type: String,
+      default: null
+    },
+    description: {
+      type: String,
+      default: null
+    },
     cta: {
       type: String,
       default: 'Learn More'
@@ -72,9 +96,17 @@ export default {
       type: String,
       default: null
     },
-    link: String,
+    link: {
+      type: String,
+      default: null
+    },
     hasTextLink: {
+      type: Boolean,
       default: false
+    },
+    tag: {
+      type: String,
+      default: null
     }
   }
 }
@@ -84,15 +116,23 @@ export default {
 .card {
   width: 100%;
   height: 100%;
-  opacity: 1;
-  background: var(--card-background);
-  transition: var(--transition);
   position: relative;
+  color: var(--card-color-text);
+  background: var(--card-background);
+  opacity: 1;
+  transition: var(--transition);
+  padding: var(--space-4) var(--space-6);
 
   &:hover {
     opacity: var(--opacity-on-hover);
     cursor: pointer;
   }
+}
+
+.card-tag {
+  background: var(--card-background);
+  width: fit-content;
+  margin-bottom: var(--space-2);
 }
 
 .card-link {
@@ -103,23 +143,36 @@ export default {
   right: 0;
 }
 
+.card-icon {
+  margin-bottom: var(--space-4);
+}
+
 .card-title {
-  color: var(--card-header-text);
-  background: var(--card-header-background);
+  font-size: var(--font-size-8);
+  line-height:  var(--font-size-8);
   font-weight: 700;
+  margin-bottom: var(--space-2);
 }
 
 .card-image {
   top: 0;
   left: 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-2);
 }
 
-.card-icon {
-  margin: var(--space-2) 0 var(--space-3);
+.card .media-block {
+  margin-bottom: var(--space-4);
 }
 
 .card-subtitle {
   font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.card-description {
+  margin-bottom: var(--space-2);
 }
 
 .card-cta {
