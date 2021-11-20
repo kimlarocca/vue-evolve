@@ -43,9 +43,8 @@
       <div
         v-if="description"
         class="card-description"
-      >
-        {{ description }}
-      </div>
+        v-html="description"
+      />
       <template v-if="hasTextLink">
         <div class="card-cta">
           {{ cta }}
