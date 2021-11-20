@@ -22,35 +22,33 @@
     <template v-if="video">
       <media-block :url="video" />
     </template>
-    <div class="card-content">
-      <i
-        v-if="icon"
-        :class="icon"
-        class="card-icon"
-      />
-      <div
-        v-if="title"
-        class="card-title"
-      >
-        {{ title }}
-      </div>
-      <div
-        v-if="subtitle"
-        class="card-subtitle"
-      >
-        {{ subtitle }}
-      </div>
-      <div
-        v-if="description"
-        class="card-description"
-        v-html="description"
-      />
-      <template v-if="hasTextLink">
-        <div class="card-cta">
-          {{ cta }}
-        </div>
-      </template>
+    <i
+      v-if="icon"
+      :class="icon"
+      class="card-icon"
+    />
+    <div
+      v-if="title"
+      class="card-title"
+    >
+      {{ title }}
     </div>
+    <div
+      v-if="subtitle"
+      class="card-subtitle"
+    >
+      {{ subtitle }}
+    </div>
+    <div
+      v-if="description"
+      class="card-description"
+      v-html="description"
+    />
+    <template v-if="hasTextLink">
+      <div class="card-cta">
+        {{ cta }}
+      </div>
+    </template>
   </div>
 </template>
 
@@ -113,6 +111,8 @@ export default {
 
 <style lang="scss">
 .card {
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   height: 100%;
   position: relative;
@@ -158,7 +158,7 @@ export default {
   left: 0;
   width: 100%;
   height: auto;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .card .media-block {
@@ -176,5 +176,6 @@ export default {
 
 .card-cta {
   color: var(--card-color-link);
+  margin-top: auto;
 }
 </style>

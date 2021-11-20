@@ -115,7 +115,7 @@ export const InAGrid = () => ({
       altText="alternative text"
       subtitle="subtitle"
       :hasTextLink="true"
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae consectetur corporis dicta magnam, molestias natus nobis, placeat, quae quia suscipit ullam vitae voluptatem? Enim facilis ipsum odio praesentium quis."
+      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
     </div>
   `
