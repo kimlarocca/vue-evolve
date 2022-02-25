@@ -3,10 +3,7 @@ module.exports = {
   env: {
     node: true
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/standard'
-  ],
+  extends: ["plugin:vue/essential", "@vue/standard", "plugin:storybook/recommended"],
   parserOptions: {
     parser: 'babel-eslint'
   },
@@ -15,4 +12,4 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'indent': 0
   }
-}
+};
