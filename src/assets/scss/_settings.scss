@@ -2,19 +2,19 @@
   // Colors
   --color-white: #ffffff;
   --color-black: #121212;
-  --color-dark-gray: #1E1E1E;
+  --color-dark-gray: #1e1e1e;
   --color-gray: #383838;
   --color-light-gray: #e6e6e6;
-  --color-primary: #71CCAE;
-  --color-secondary: #F4B16D;
-  --color-tertiary: #808EDA;
-  --color-quaternary: #64C4CE;
-  --color-quinary: #F3A893;
+  --color-primary: #71ccae;
+  --color-secondary: #f4b16d;
+  --color-tertiary: #808eda;
+  --color-quaternary: #64c4ce;
+  --color-quinary: #f3a893;
 
   // Fonts
-  --font-family-primary: "Arial", sans-serif;
-  --font-family-secondary: "Arial", sans-serif;
-  --font-family-fa: "Font Awesome 5 Free", serif;
+  --font-family-primary: 'Arial', sans-serif;
+  --font-family-secondary: 'Arial', sans-serif;
+  --font-family-fa: 'Font Awesome 5 Free', serif;
 
   // Font Levers
   --font-base: 18px;
@@ -137,8 +137,8 @@
   --grid-gutter-large: 72px;
 
   // Animation
-  --transition: .3s ease-out;
-  --opacity-on-hover: .75;
+  --transition: 0.3s ease-out;
+  --opacity-on-hover: 0.75;
 
   // Main Styles
   --color-text: var(--color-black);
@@ -228,20 +228,24 @@
   --footer-background: var(--color-background-muted);
   --footer-padding: var(--space-6);
   --footer-alignment: center;
+
+  // Tags
+  --color-tag-text: var(--color-text);
+  --color-tag-background: var(--color-background-muted);
 }
 
 @mixin dark-mode {
   // Colors
   --color-white: #eaeaea;
   --color-black: #121212;
-  --color-dark-gray: #1E1E1E;
+  --color-dark-gray: #1e1e1e;
   --color-gray: #383838;
   --color-light-gray: #f3f3f3;
-  --color-primary: #98DBC5;
-  --color-secondary: #F7C792;
-  --color-tertiary: #A5AEE4;
-  --color-quaternary: #64C4CE;
-  --color-quinary: #99DDE1;
+  --color-primary: #98dbc5;
+  --color-secondary: #f7c792;
+  --color-tertiary: #a5aee4;
+  --color-quaternary: #64c4ce;
+  --color-quinary: #99dde1;
 
   // Main Styles
   --color-text: var(--color-text-inverse);
@@ -302,6 +306,10 @@
   --footer-background: var(--color-background-muted);
   --footer-padding: var(--space-6);
   --footer-alignment: center;
+
+  // Tags
+  --color-tag-text: var(--color-text);
+  --color-tag-background: var(--color-background-muted);
 }
 
 .dark-mode {
