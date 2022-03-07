@@ -1,17 +1,10 @@
 <template>
   <div class="card">
-    <div
-      v-if="tag"
-      class="card-tag"
-    >
+    <div v-if="tag" class="card-tag">
       {{ tag }}
     </div>
-    <a
-      v-if="link"
-      :href="link"
-      :aria-label="title"
-      class="card-link"
-    />
+    <a v-if="link" :href="link" :aria-label="title" class="card-link" />
+    <nuxt-link v-if="to" :to="to" :aria-label="title" class="card-link" />
     <img
       v-if="image"
       :src="image"
@@ -22,28 +15,14 @@
     <template v-if="video">
       <media-block :url="video" />
     </template>
-    <i
-      v-if="icon"
-      :class="icon"
-      class="card-icon"
-    />
-    <div
-      v-if="title"
-      class="card-title"
-    >
+    <i v-if="icon" :class="icon" class="card-icon" />
+    <div v-if="title" class="card-title">
       {{ title }}
     </div>
-    <div
-      v-if="subtitle"
-      class="card-subtitle"
-    >
+    <div v-if="subtitle" class="card-subtitle">
       {{ subtitle }}
     </div>
-    <div
-      v-if="description"
-      class="card-description"
-      v-html="description"
-    />
+    <div v-if="description" class="card-description" v-html="description" />
     <template v-if="hasTextLink">
       <div class="card-cta">
         {{ cta }}
@@ -104,6 +83,10 @@ export default {
     tag: {
       type: String,
       default: null
+    },
+    to: {
+      type: String,
+      default: null
     }
   }
 }
@@ -148,7 +131,7 @@ export default {
 
 .card-title {
   font-size: var(--font-size-8);
-  line-height:  var(--font-size-8);
+  line-height: var(--font-size-8);
   font-weight: 700;
   margin-bottom: var(--space-2);
 }
