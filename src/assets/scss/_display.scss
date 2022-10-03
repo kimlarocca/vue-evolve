@@ -74,3 +74,11 @@
     display: none;
   }
 }
+
+.u-pointer-events--cursor {
+  pointer-events: cursor;
+}
+
+.u-pointer-events--none {
+  pointer-events: none;
+}
